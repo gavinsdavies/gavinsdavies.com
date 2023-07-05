@@ -3,6 +3,15 @@ languageCode: "en-us"
 title: "Gavin S. Davies"
 theme: hugo-profile
 
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
 Paginate: 3
 #disqusShortname: 
 #googleAnalytics: 
@@ -55,6 +64,12 @@ params:
   # Note the lack of "" in true, it should be of boolean type.
   useBootstrapCDN: false
 
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  # Make the nav bar sticky
+  stickyNav: true
+  
   theme:
     disableThemeToggle: false
     # defaultTheme: "light" # dark
@@ -83,17 +98,18 @@ params:
   #     secondaryColor:
 
   # If you want to customize the menu, you can change it here
-  # navbar:
-  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-  #   brandName: "Profile" # Brand name for the brand | default is the title variable
-
-  #   menus:
+  navbar:
+     align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+     brandLogo: "" # Logo for the brand | default is the favicon variable
+     showBrandLogo: false # Show brand logo in nav bar | default is true
+     #brandName: "Profile" # Brand name for the brand | default is the title variable
+     disableSearch: true
+     menus:
   #     disableAbout: true
   #     disableExperience: true
   #     disableEducation: true
-  #     disableProjects: true
-  #     disableAchievements: true
+       disableProjects: true
+       disableAchievements: true
   #     disableContact: true
 
   # Hero
@@ -102,12 +118,17 @@ params:
     intro: "Hi, my name is"
     title: "Dr. Gavin S. Davies"
     subtitle: "Assistant Professor of Physics at the University of Mississippi"
-    #content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    content: "some words"
     image: /img/gsd-memoji.svg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
     button:
       enable: true
-      name: "Resume"
+      name: "Resume / CV"
       url: "#"
+      download: false
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -215,7 +236,7 @@ params:
 
   # Achievements
   achievements:
-    enable: true
+    enable: false
     items:
       - title: Google kickstart runner
         content: I solved all problems with optimal solution.
@@ -233,7 +254,7 @@ params:
 
   # projects
   projects:
-    enable: true
+    enable: false
     items:
       - title: Hugo Profile
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
@@ -284,7 +305,7 @@ params:
   contact:
     enable: true
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gsdavies@olemiss.edu
+    email: gavin.s.davies@gmail.com
     btnName: Mail me
 
   footer:
@@ -293,5 +314,8 @@ params:
       github: https://github.com/gavinsdavies
       linkedin: https://linkedin.com
       twitter: https://twitter.com.daviesga
-      instagram: https://instagram.com
-      facebook: https://facebook.com
+      #instagram: https://instagram.com
+      #facebook: https://facebook.com
+
+  terms:
+    copyright: "\n"
