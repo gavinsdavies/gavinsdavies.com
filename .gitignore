@@ -19,6 +19,7 @@ build/
 # Hugo build output
 public/
 resources/
+.hugo_build.lock
 
 # Node
 node_modules/
