@@ -63,8 +63,9 @@ sections:
     content:
       title: Outreach & Service
       text: |
-        **Mentoring.** As a first-generation college student myself, I'm
-        committed to supporting researchers from all backgrounds. I supervise
+        **Mentoring.** As a first-generation student — from college through
+        to a PhD — I'm committed to supporting researchers from all
+        backgrounds. I supervise
         graduate and undergraduate researchers in the
         [UM Neutrino group](https://www.umneutrino.com), with an emphasis on
         research skills, scientific communication, and career development.
