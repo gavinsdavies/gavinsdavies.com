@@ -1,0 +1,27 @@
+{{/* Social icons row — pulled from admin author profile */}}
+{{ $admin := site.GetPage "/authors/admin" }}
+{{ if $admin }}
+<div class="flex justify-center gap-4 py-3 text-slate-500 dark:text-slate-400">
+  {{ range $admin.Params.profiles }}
+  {{ $link := .url | default .link }}
+  {{ $scheme := (urls.Parse $link).Scheme }}
+  {{ $target := "" }}
+  {{ if in (slice "http" "https") $scheme }}
+    {{ $target = "target=\"_blank\" rel=\"noopener noreferrer\"" }}
+  {{ end }}
+  <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}
+     class="transition-transform hover:scale-125 hover:text-primary-600 dark:hover:text-primary-400"
+     aria-label="{{ .label | default .icon }}">
+    {{ partial "functions/get_icon" (dict "name" .icon "attributes" "style=\"height:1.25rem;\"") }}
+  </a>
+  {{ end }}
+</div>
+{{ end }}
+
+<p class="text-center text-sm opacity-70 pb-2">
+  Made with &#10084;&#65039; by
+  <a class="underline hover:opacity-100" href="https://gavinsdavies.com">Gavin S. Davies</a>
+  &middot;
+  Powered by <a class="underline hover:opacity-100" href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+  &amp; <a class="underline hover:opacity-100" href="https://hugoblox.com" target="_blank" rel="noopener">Hugo Blox</a>
+</p>

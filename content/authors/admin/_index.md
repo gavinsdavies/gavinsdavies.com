@@ -23,26 +23,22 @@ education:
     - course: PhD in Physics
       institution: Lancaster University, UK
 
-social:
-  - icon: envelope
-    icon_pack: fas
-    link: mailto:gsdavies@olemiss.edu
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/gavinsdavies
-  - icon: linkedin
-    icon_pack: fab
-    link: https://www.linkedin.com/in/gavinsdavies
-  - icon: orcid
-    icon_pack: ai
-    link: https://orcid.org/0000-0002-5728-5356
-  - icon: inspire
-    icon_pack: ai
-    link: https://inspirehep.net/authors/1281759
-  # Uncomment and fill in when available:
-  # - icon: google-scholar
-  #   icon_pack: ai
-  #   link: https://scholar.google.com/citations?user=XXXXX
+profiles:
+  - icon: at-symbol
+    url: mailto:gsdavies@olemiss.edu
+    label: Email
+  - icon: brands/github
+    url: https://github.com/gavinsdavies
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/gavinsdavies
+    label: LinkedIn
+  - icon: brands/orcid
+    url: https://orcid.org/0000-0002-5728-5356
+    label: ORCID
+  - icon: academicons/inspire
+    url: https://inspirehep.net/authors/1281759
+    label: INSPIRE
 
 highlight_name: true
 ---

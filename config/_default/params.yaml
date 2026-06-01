@@ -8,6 +8,7 @@ header:
       text: Gavin S. Davies
     align: right
     show_search: false
+    fixed_to_top: true
 
 # APPEARANCE
 appearance:
