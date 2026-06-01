@@ -5,6 +5,7 @@
 header:
   navbar:
     logo:
+      filename: gsd-memoji.svg
       text: Gavin S. Davies
     align: right
     show_search: false
