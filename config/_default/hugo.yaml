@@ -1,4 +1,8 @@
 baseURL: 'https://gavinsdavies.com/'
+
+# Required for Tailwind v4 CSS generation — writes hugo_stats.json
+build:
+  writeStats: true
 title: Gavin S. Davies
 copyright: '© {year} Gavin S. Davies'
 

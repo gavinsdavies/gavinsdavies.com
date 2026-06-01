@@ -1,6 +1,14 @@
 # SITE IDENTITY
 # Edit authors/admin/_index.md for bio, photo, and social links
 
+# HEADER / NAVBAR
+header:
+  navbar:
+    logo:
+      text: Gavin S. Davies
+    align: right
+    show_search: false
+
 # APPEARANCE
 appearance:
   color: teal       # accent color — see assets/css/themes/ for options
