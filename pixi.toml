@@ -1,0 +1,13 @@
+[workspace]
+authors = ["Gavin S. Davies <gavin.s.davies@gmail.com>"]
+channels = ["conda-forge"]
+name = "gavinsdavies.com"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+hugo = ">=0.162.1,<0.163"
+go = ">=1.26.3,<2"
+nodejs = ">=26.2.0,<26.3"
