@@ -1,0 +1,54 @@
+baseURL: 'https://gavinsdavies.com/'
+title: Gavin S. Davies
+copyright: '© {year} Gavin S. Davies'
+
+# Language
+locale: en-us
+
+# Content
+enableEmoji: true
+enableGitInfo: false
+summaryLength: 30
+
+# Security
+enableInlineShortcodes: false
+
+# Pagination
+pagination:
+  pagerSize: 10
+
+# Taxonomies
+taxonomies:
+  tag: tags
+  category: categories
+  author: authors
+
+# Outputs — required by Hugo Blox
+outputs:
+  home:
+    - HTML
+    - RSS
+    - WebAppManifest
+    - headers
+    - redirects
+  section:
+    - HTML
+    - RSS
+  taxonomy:
+    - HTML
+    - RSS
+
+# Image processing
+imaging:
+  resampleFilter: lanczos
+  quality: 80
+  anchor: smart
+
+# Markup
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3

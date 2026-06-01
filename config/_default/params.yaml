@@ -1,0 +1,45 @@
+# SITE IDENTITY
+# Edit authors/admin/_index.md for bio, photo, and social links
+
+# APPEARANCE
+appearance:
+  theme_day: minimal
+  theme_night: minimal
+  font: native
+  font_size: L
+
+# FEATURES
+features:
+  syntax_highlighter:
+    enable: false
+  math:
+    enable: false
+  privacy_pack:
+    enable: false
+  repository:
+    url: 'https://github.com/gavinsdavies/gavinsdavies.com'
+    branch: main
+
+# SEO / MARKETING
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: 'University of Mississippi'
+    description: 'Experimental particle physicist at the University of Mississippi working on neutrino oscillation physics with NOvA, DUNE, and EMPHATIC.'
+    twitter: ''
+  analytics:
+    google_analytics: ''
+
+# CONTACT WIDGET
+contact:
+  email: gsdavies@phy.olemiss.edu
+  address:
+    street: 222 Lewis Hall, University of Mississippi
+    city: Oxford
+    region: MS
+    postcode: '38677'
+    country: United States
+    country_code: US
+  office_hours:
+    - 'By appointment'
