@@ -1,0 +1,145 @@
+{{/* Hugo Blox: Biography — site override (adds memoji alongside avatar) */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $author := $block.content.username | default "admin" }}
+
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find an author page at `%s`." $person_page_path }}
+{{end}}
+{{ $person := $person_page.Params }}
+{{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
+
+{{/* Avatar customization parameters */}}
+{{ $avatar_size := $block.design.avatar.size | default "medium" }}
+{{ $avatar_shape := $block.design.avatar.shape | default "circle" }}
+
+{{ $size_map := dict "small" (slice "150" "300") "medium" (slice "200" "400") "large" (slice "320" "640") "xl" (slice "400" "800") "xxl" (slice "500" "1000") }}
+{{ $size_config := index $size_map $avatar_size | default (index $size_map "medium") }}
+{{ $display_size := index $size_config 0 }}
+{{ $generation_size := index $size_config 1 }}
+
+{{ $shape_classes := dict "circle" "rounded-full" "square" "rounded-none" "rounded" "rounded-lg" }}
+{{ $shape_class := index $shape_classes $avatar_shape | default "rounded-full" }}
+
+{{ $img := "" }}
+{{with $block.design.banner.filename}}
+{{- $img = resources.Get (path.Join "media" .) -}}
+{{ if $img }}
+  {{ if ne $img.MediaType.SubType "gif" }}
+    {{ $responsive := partial "functions/process_responsive_image.html" (dict
+        "image" $img
+        "mode" "fill"
+        "aspect_ratio" "16:9"
+        "sizes" (slice 768 1024 1366 1920 2560)
+    ) }}
+    <div class="w-full bg-gray-200 dark:bg-gray-900 flex flex-wrap items-center justify-center">
+      <div class="w-full bg-white rounded dark:bg-gray-800">
+        <div class="h-2/4 sm:h-64 overflow-hidden w-full">
+          <img class="w-full object-cover"
+               srcset="{{ $responsive.srcset }}"
+               sizes="100vw"
+               src="{{ $responsive.fallback.RelPermalink }}"
+               width="{{ $responsive.fallback.Width }}"
+               height="{{ $responsive.fallback.Height }}"
+               alt="" />
+        </div>
+      </div>
+    </div>
+  {{ else }}
+    {{- $img = $img.Process "webp" -}}
+    <div class="w-full bg-gray-200 dark:bg-gray-900 flex flex-wrap items-center justify-center">
+      <div class="w-full bg-white rounded dark:bg-gray-800">
+        <div class="h-2/4 sm:h-64 overflow-hidden w-full">
+          <img class="w-full object-cover" src="{{$img.RelPermalink}}"
+               width="{{$img.Width}}" height="{{$img.Height}}" alt="" />
+        </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+{{ end }}
+
+<div id="profile" class="resume-biography flex justify-center items-center flex-col dark:text-white">
+  {{ if $avatar }}
+  {{/* Avatar row: photo + memoji side by side */}}
+  <div class="flex items-end gap-4 {{ if $img }}-mt-[105px]{{else}}mt-10{{end}}">
+    <div class="avatar-wrapper" style="width: {{$display_size}}px; height: {{$display_size}}px;">
+      {{ $avatar_image := $avatar.Fill (printf "%sx%s Center" $generation_size $generation_size) }}
+      <img class="avatar {{$shape_class}} bg-white dark:bg-gray-800 p-1"
+           src="{{ $avatar_image.RelPermalink }}" alt="{{$person_page.Title}}"
+           width="{{$display_size}}" height="{{$display_size}}"
+           style="width: {{$display_size}}px; height: {{$display_size}}px; object-fit: cover;">
+      {{with $person.status.icon}}<span class="avatar-emoji">{{.|emojify}}</span>{{end}}
+    </div>
+    {{/* Memoji alongside the photo */}}
+    {{ $memoji := resources.Get "media/gsd-memoji.svg" }}
+    {{ if $memoji }}
+    <div style="width: {{$display_size}}px; height: {{$display_size}}px;">
+      {{ $memoji.Content | safeHTML }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <div class="text-3xl font-bold mb-2 mt-6">
+    {{- if $person.name_pronunciation -}}
+      <ruby><rb>{{ $person_page.Title }}</rb><rt>{{ $person.name_pronunciation }}</rt></ruby>
+    {{- else -}}
+      {{- $person_page.Title -}}
+    {{- end -}}
+  </div>
+  {{- with $person.pronouns -}}
+    <div class="text-lg font-normal text-gray-600 dark:text-gray-400 -mt-1 mb-2">({{ . }})</div>
+  {{- end -}}
+
+  {{ with $person.role }}<h3 class="font-semibold mb-1">{{ . | markdownify | emojify }}</h3>{{ end }}
+
+  {{ range $person.organizations }}
+  <div class="mb-2">
+    {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+    <div>{{ .name }}</div>
+    {{ if .url }}</a>{{ end }}
+  </div>
+  {{ end }}
+
+  <ul class="network-icon dark:text-zinc-100">
+    {{ range $person.profiles }}
+    {{ $pack := or .icon_pack "fas" }}
+    {{ $pack_prefix := $pack }}
+    {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+      {{ $pack_prefix = "fa" }}
+    {{ end }}
+    {{ $link := .url | default .link }}
+    {{ $scheme := (urls.Parse $link).Scheme }}
+    {{ $target := "" }}
+    {{ if not $scheme }}
+      {{ $link = (.url | default .link) | relLangURL }}
+      {{ if eq (path.Ext $link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
+    {{ else if in (slice "http" "https") $scheme }}
+      {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+    {{ end }}
+    <li>
+      <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}"
+         {{ with .label }} data-toggle="tooltip" data-placement="top" title="{{.}}"{{ end }}>
+        {{ partial "functions/get_icon" (dict "name" .icon "attributes" "style=\"height: 1.5rem;\"") }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+
+  {{ with ($block.content.text | emojify | $page.RenderString) | default $person_page.Content }}
+  <div class="pt-2 d-flex justify-content-center prose prose-slate lg:prose-xl dark:prose-invert">
+    <div class="bio-text" {{ with $block.design.biography.style }}{{ (printf "style=\"%s\"" .) | safe.HTMLAttr }}{{end}}>
+      {{ . }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ with $block.content.button }}
+  <a href="{{.url}}" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg transition-colors hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:text-white dark:focus:ring-gray-700">{{.text}}</a>
+  {{ end }}
+
+</div>
