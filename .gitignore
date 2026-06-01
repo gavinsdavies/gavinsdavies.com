@@ -20,6 +20,9 @@ build/
 public/
 resources/
 
+# Node
+node_modules/
+
 # pixi environments
 .pixi/*
 !.pixi/config.toml

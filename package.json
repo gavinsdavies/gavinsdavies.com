@@ -1,0 +1,14 @@
+{
+  "name": "gavinsdavies.com",
+  "private": true,
+  "scripts": {
+    "build": "hugo --gc --minify",
+    "dev": "hugo server --disableFastRender"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19"
+  }
+}
