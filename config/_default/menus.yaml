@@ -8,9 +8,12 @@ main:
   - name: Teaching
     url: '/#teaching'
     weight: 30
+  - name: Outreach
+    url: '/#outreach'
+    weight: 40
   - name: CV
     url: uploads/cv.pdf
-    weight: 40
+    weight: 50
   - name: Contact
     url: '/#contact'
-    weight: 50
+    weight: 60

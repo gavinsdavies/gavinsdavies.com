@@ -58,6 +58,25 @@ sections:
     design:
       columns: '1'
 
+  - block: markdown
+    id: outreach
+    content:
+      title: Outreach & Service
+      text: |
+        **Mentoring.** As a first-generation college student myself, I'm
+        committed to supporting researchers from all backgrounds. I supervise
+        graduate and undergraduate researchers in the
+        [UM Neutrino group](https://www.umneutrino.com), with an emphasis on
+        research skills, scientific communication, and career development.
+
+        **Service.** I serve on the
+        [APS DPF Coordinating Panel for Software & Computing (CPSC)](https://www.aps.org/units/dpf/),
+        leading the Rising Star Awards Sub-Committee. Past roles include
+        Chairperson of the Fermilab Users Executive Committee (2018–2019) and
+        Computing Co-Chair of [ICHEP 2024](https://ichep2024.org/) in Prague.
+    design:
+      columns: '1'
+
   - block: contact-info
     id: contact
     content:
