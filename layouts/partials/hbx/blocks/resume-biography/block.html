@@ -74,10 +74,10 @@
            style="width: {{$display_size}}px; height: {{$display_size}}px; object-fit: cover;">
       {{with $person.status.icon}}<span class="avatar-emoji">{{.|emojify}}</span>{{end}}
     </div>
-    {{/* Memoji alongside the photo */}}
+    {{/* Memoji alongside the photo — fixed at ~half the avatar height */}}
     {{ $memoji := resources.Get "media/gsd-memoji.svg" }}
     {{ if $memoji }}
-    <div style="width: {{$display_size}}px; height: {{$display_size}}px;">
+    <div style="width: 100px; height: 100px; flex-shrink: 0;">
       {{ $memoji.Content | safeHTML }}
     </div>
     {{ end }}
