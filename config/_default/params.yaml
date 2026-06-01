@@ -3,10 +3,9 @@
 
 # APPEARANCE
 appearance:
-  theme_day: minimal
-  theme_night: minimal
-  font: native
-  font_size: L
+  color: teal       # accent color — see assets/css/themes/ for options
+  font: serif       # Roboto Slab variable font
+  mode: system      # light | dark | system
 
 # FEATURES
 features:
@@ -33,7 +32,7 @@ marketing:
 
 # CONTACT WIDGET
 contact:
-  email: gsdavies@phy.olemiss.edu
+  email: gsdavies@olemiss.edu
   address:
     street: 222 Lewis Hall, University of Mississippi
     city: Oxford
