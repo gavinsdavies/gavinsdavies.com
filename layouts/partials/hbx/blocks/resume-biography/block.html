@@ -74,11 +74,16 @@
            style="width: {{$display_size}}px; height: {{$display_size}}px; object-fit: cover;">
       {{with $person.status.icon}}<span class="avatar-emoji">{{.|emojify}}</span>{{end}}
     </div>
-    {{/* Memoji alongside the photo — fixed at ~half the avatar height */}}
+    {{/* Memoji alongside the photo.
+         The SVG has intrinsic pt-based dimensions (~660×730px) that must be
+         stripped before inlining, otherwise they override any CSS container. */}}
     {{ $memoji := resources.Get "media/gsd-memoji.svg" }}
     {{ if $memoji }}
-    <div style="width: 100px; height: 100px; flex-shrink: 0;">
-      {{ $memoji.Content | safeHTML }}
+    {{ $svg := $memoji.Content }}
+    {{ $svg = replaceRE `width="[^"]*"` `width="100%"` $svg }}
+    {{ $svg = replaceRE `height="[^"]*"` `height="100%"` $svg }}
+    <div style="width: 72px; height: 72px; flex-shrink: 0; overflow: hidden;">
+      {{ $svg | safeHTML }}
     </div>
     {{ end }}
   </div>
