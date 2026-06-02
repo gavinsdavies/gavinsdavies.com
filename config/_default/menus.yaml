@@ -11,6 +11,9 @@ main:
   - name: Outreach
     url: '/#outreach'
     weight: 40
+  - name: Writing
+    url: '/blog/'
+    weight: 45
   - name: CV
     url: uploads/cv.pdf
     weight: 50

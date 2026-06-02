@@ -1,0 +1,80 @@
+{{/* PaperMod-style single post for the blog section.
+     Centered ~720px reading column; reuses theme image/reading-time helpers.
+     baseof.html still provides the navbar, footer, and theme toggle. */}}
+{{ define "main" }}
+<article class="max-w-[720px] w-full mx-auto px-4">
+
+  {{/* Back to listing */}}
+  <div class="mb-6">
+    {{ $blog := site.GetPage "/blog" }}
+    <a href="{{ "/blog/" | relLangURL }}" class="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-primary-600 dark:text-zinc-400 dark:hover:text-primary-400 transition-colors">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      {{ with $blog }}{{ .Title }}{{ else }}Writing{{ end }}
+    </a>
+  </div>
+
+  {{/* Title */}}
+  <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">{{ .Title }}</h1>
+
+  {{/* Meta: date · reading time · author(s) */}}
+  <div class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-zinc-500 dark:text-zinc-400">
+    {{ if and .Date (not .Params.hide_date) }}
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (site.Params.locale.date_format | default ":date_long") }}</time>
+    {{ end }}
+    {{ if ne .Params.reading_time false }}
+      <span aria-hidden="true">·</span>
+      <span>{{ .ReadingTime }} {{ i18n "minute_read" | default "min read" }}</span>
+    {{ end }}
+    {{ range .GetTerms "authors" }}
+      <span aria-hidden="true">·</span>
+      <span>{{ .Page.LinkTitle }}</span>
+    {{ end }}
+  </div>
+
+  {{/* Cover image (optional) */}}
+  {{ $featured := partial "functions/get_featured_image.html" . }}
+  {{ with $featured }}
+    {{ if and (ne .MediaType.SubType "gif") (not $.Params.image.preview_only) }}
+      {{ $img := .Fit "1440x2500" }}
+      <img class="mt-8 w-full rounded-lg object-cover" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ with $.Params.image.alt_text }}{{ . }}{{ end }}" fetchpriority="high">
+    {{ end }}
+  {{ end }}
+
+  {{/* Body */}}
+  <div class="mt-8 prose prose-slate dark:prose-invert max-w-none">
+    {{ .Content }}
+  </div>
+
+  {{/* Tags */}}
+  {{ with .GetTerms "tags" }}
+  <div class="mt-8 flex flex-wrap gap-2">
+    {{ range . }}
+    <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{/* Prev / next within the section */}}
+  {{ if or .PrevInSection .NextInSection }}
+  <nav class="mt-12 flex justify-between gap-4 border-t border-zinc-200 dark:border-zinc-800 pt-6 text-sm">
+    <div>
+      {{ with .PrevInSection }}
+      <a href="{{ .RelPermalink }}" class="group inline-flex flex-col">
+        <span class="text-zinc-400 dark:text-zinc-500">{{ i18n "previous" | default "Previous" }}</span>
+        <span class="text-zinc-700 dark:text-zinc-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+    <div class="text-right">
+      {{ with .NextInSection }}
+      <a href="{{ .RelPermalink }}" class="group inline-flex flex-col items-end">
+        <span class="text-zinc-400 dark:text-zinc-500">{{ i18n "next" | default "Next" }}</span>
+        <span class="text-zinc-700 dark:text-zinc-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </nav>
+  {{ end }}
+
+</article>
+{{ end }}

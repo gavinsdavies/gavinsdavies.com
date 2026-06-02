@@ -1,0 +1,64 @@
+{{/* PaperMod-style entry card.
+     Plugs into the theme's render_view pipeline (list.html / collection block).
+     index 0 renders as a larger "first entry" hero; the rest as standard cards. */}}
+{{ $item := .item }}
+{{ $index := .index }}
+{{ $config := .config | default dict }}
+{{ $showDate := $config.show_date | default true }}
+{{ $showReadTime := $config.show_read_time | default true }}
+{{ $isFirst := eq $index 0 }}
+
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ with $item.Params.external_link }}{{ $link = . }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
+
+{{ $summary := $item.Params.summary | default $item.Params.description | default $item.Summary }}
+{{ $cover := partial "functions/get_featured_image.html" $item }}
+
+<article class="group relative rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-zinc-300 dark:hover:border-zinc-700 focus-within:border-zinc-300 dark:focus-within:border-zinc-700{{ if $isFirst }} flex flex-col justify-center{{ end }}">
+
+  {{/* Cover image (optional) */}}
+  {{ with $cover }}
+    {{ if ne .MediaType.SubType "gif" }}
+      {{ $img := .Fill "1200x480 Center" }}
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="relative z-10 block mb-4 -mt-1">
+        <img class="w-full rounded-lg object-cover" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy" decoding="async" alt="{{ $item.Title | plainify }}">
+      </a>
+    {{ end }}
+  {{ end }}
+
+  {{/* Title — stretched link makes the whole card clickable */}}
+  <h2 class="{{ if $isFirst }}text-3xl md:text-4xl{{ else }}text-2xl{{ end }} font-semibold leading-snug tracking-tight text-zinc-900 dark:text-zinc-100">
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="after:absolute after:inset-0 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
+      {{ $item.Title }}
+    </a>
+  </h2>
+
+  {{/* Meta: date · reading time */}}
+  <div class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-zinc-500 dark:text-zinc-400">
+    {{ if and $showDate $item.Date }}
+      <time datetime="{{ $item.Date.Format "2006-01-02" }}">{{ $item.Date | time.Format (site.Params.locale.date_format | default "Jan 2, 2006") }}</time>
+    {{ end }}
+    {{ if and $showDate $showReadTime $item.Date }}<span aria-hidden="true">·</span>{{ end }}
+    {{ if $showReadTime }}
+      <span>{{ $item.ReadingTime }} {{ i18n "minute_read" | default "min read" }}</span>
+    {{ end }}
+  </div>
+
+  {{/* Summary */}}
+  {{ with $summary }}
+  <p class="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 {{ if $isFirst }}line-clamp-3{{ else }}line-clamp-2{{ end }}">
+    {{ . | plainify | htmlUnescape }}
+  </p>
+  {{ end }}
+
+  {{/* Tags — raised above the stretched link so they stay clickable */}}
+  {{ with $item.GetTerms "tags" }}
+  <div class="relative z-10 mt-4 flex flex-wrap gap-2">
+    {{ range . }}
+    <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</article>
