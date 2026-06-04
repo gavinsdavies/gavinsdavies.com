@@ -1,54 +1,61 @@
-# SITE IDENTITY
-# Edit authors/admin/_index.md for bio, photo, and social links
+env: production
+description: Experimental particle physicist at the University of Mississippi working on neutrino oscillation physics with NOvA, DUNE, and EMPHATIC.
+author: Gavin S. Davies
+defaultTheme: auto
+ShowReadingTime: true
+ShowShareButtons: false
+ShowPostNavLinks: true
+ShowBreadCrumbs: true
+ShowCodeCopyButtons: true
+ShowToc: true
+TocOpen: false
+hideFooter: false
 
-# HEADER / NAVBAR
-header:
-  navbar:
-    logo:
-      filename: gsd-memoji.svg
-      text: Gavin S. Davies
-    align: right
-    show_search: false
-    fixed_to_top: true
+assets:
+  favicon: /img/gsd-memoji.svg
 
-# APPEARANCE
-appearance:
-  color: teal       # accent color — see assets/css/themes/ for options
-  font: serif       # Roboto Slab variable font
-  mode: system      # light | dark | system
+label:
+  text: Gavin S. Davies
+  icon: /img/gsd-memoji.svg
+  iconHeight: 28
 
-# FEATURES
-features:
-  syntax_highlighter:
-    enable: false
-  math:
-    enable: false
-  privacy_pack:
-    enable: false
-  repository:
-    url: 'https://github.com/gavinsdavies/gavinsdavies.com'
-    branch: main
+profileMode:
+  enabled: true
+  title: Gavin S. Davies
+  subtitle: Experimental particle physicist at the University of Mississippi working on neutrino oscillations with NOvA, DUNE, and EMPHATIC.
+  imageUrl: /img/me.jpg
+  imageTitle: Gavin S. Davies
+  imageWidth: 160
+  imageHeight: 160
+  buttons:
+    - name: Writing
+      url: /blog/
+    - name: Research Group
+      url: https://www.umneutrino.com
+    - name: CV
+      url: /uploads/cv.pdf
 
-# SEO / MARKETING
-marketing:
-  seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: 'University of Mississippi'
-    description: 'Experimental particle physicist at the University of Mississippi working on neutrino oscillation physics with NOvA, DUNE, and EMPHATIC.'
-    twitter: ''
-  analytics:
-    google_analytics: ''
+socialIcons:
+  - name: email
+    url: mailto:gsdavies@olemiss.edu
+  - name: github
+    url: https://github.com/gavinsdavies
+  - name: linkedin
+    url: https://www.linkedin.com/in/gavinsdavies
+  - name: orcid
+    url: https://orcid.org/0000-0002-5728-5356
+  - name: googlescholar
+    url: https://scholar.google.com/citations?user=Yg5rE2YAAAAJ
 
-# CONTACT WIDGET
-contact:
-  email: gsdavies@olemiss.edu
-  address:
-    street: 222 Lewis Hall, University of Mississippi
-    city: Oxford
-    region: MS
-    postcode: '38677'
-    country: United States
-    country_code: US
-  office_hours:
-    - 'By appointment'
+fuseOpts:
+  isCaseSensitive: false
+  shouldSort: true
+  location: 0
+  distance: 1000
+  threshold: 0.4
+  minMatchCharLength: 2
+  keys:
+    - title
+    - permalink
+    - summary
+    - content

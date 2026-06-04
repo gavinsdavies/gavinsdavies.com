@@ -1,13 +1,10 @@
 baseURL: 'https://gavinsdavies.com/'
 
-# Required for Tailwind v4 CSS generation — writes hugo_stats.json
-build:
-  writeStats: true
 title: Gavin S. Davies
-copyright: '© {year} Gavin S. Davies'
+copyright: '© 2026 Gavin S. Davies'
 
-# Language
-locale: en-us
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
 
 # Content
 enableEmoji: true
@@ -25,16 +22,12 @@ pagination:
 taxonomies:
   tag: tags
   category: categories
-  author: authors
 
-# Outputs — required by Hugo Blox
 outputs:
   home:
     - HTML
     - RSS
-    - WebAppManifest
-    - headers
-    - redirects
+    - JSON
   section:
     - HTML
     - RSS
@@ -56,3 +49,45 @@ markup:
   tableOfContents:
     startLevel: 2
     endLevel: 3
+
+languages:
+  en:
+    label: English
+    locale: en-US
+    weight: 1
+    title: Gavin S. Davies
+    params:
+      profileMode:
+        subtitle: Experimental particle physicist at the University of Mississippi working on neutrino oscillations with NOvA, DUNE, and EMPHATIC.
+  es:
+    label: Espanol
+    locale: es
+    weight: 2
+    title: Gavin S. Davies
+    params:
+      profileMode:
+        subtitle: Fisico experimental de particulas en la Universidad de Mississippi. Traduccion completa pendiente.
+  da:
+    label: Dansk
+    locale: da
+    weight: 3
+    title: Gavin S. Davies
+    params:
+      profileMode:
+        subtitle: Eksperimentel partikelfysiker ved University of Mississippi. Fuld oversaettelse kommer senere.
+  fr:
+    label: Francais
+    locale: fr
+    weight: 4
+    title: Gavin S. Davies
+    params:
+      profileMode:
+        subtitle: Physicien experimental des particules a l'Universite du Mississippi. Traduction complete a venir.
+  de:
+    label: Deutsch
+    locale: de
+    weight: 5
+    title: Gavin S. Davies
+    params:
+      profileMode:
+        subtitle: Experimenteller Teilchenphysiker an der University of Mississippi. Vollstaendige Uebersetzung folgt.

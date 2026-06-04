@@ -1,0 +1,71 @@
+:root {
+  --theme: #fffdfb;
+  --entry: #ffffff;
+  --primary: #111827;
+  --secondary: #5b6675;
+  --tertiary: #e7edf0;
+  --content: #1f2937;
+  --hljs-bg: #f4f7f8;
+  --code-bg: #f4f7f8;
+  --border: #d9e2e5;
+  --gav-teal: #0f766e;
+  --gav-red: #b91c1c;
+}
+
+.dark {
+  --theme: #111827;
+  --entry: #172033;
+  --primary: #f8fafc;
+  --secondary: #cbd5e1;
+  --tertiary: #263244;
+  --content: #e5e7eb;
+  --hljs-bg: #0f172a;
+  --code-bg: #0f172a;
+  --border: #334155;
+  --gav-teal: #2dd4bf;
+  --gav-red: #f87171;
+}
+
+.profile-image img {
+  border: 3px solid var(--gav-teal);
+  border-radius: 50%;
+  box-shadow: 0 12px 32px rgba(15, 118, 110, 0.18);
+  margin: 0 auto 1rem;
+}
+
+.home-profile {
+  text-align: center;
+}
+
+.home-profile .entry-content {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+.home-profile .buttons {
+  justify-content: center;
+}
+
+.home-sections {
+  margin-top: 2rem;
+}
+
+.home-sections .post-content section {
+  border-top: 1px solid var(--border);
+  margin-top: 2.2rem;
+  padding-top: 2.2rem;
+}
+
+.home-sections .post-content h2 {
+  color: var(--gav-teal);
+}
+
+.post-content a,
+.entry-content a {
+  box-shadow: 0 1px 0 var(--gav-red);
+}
+
+.post-content a:hover,
+.entry-content a:hover {
+  color: var(--gav-red);
+}
