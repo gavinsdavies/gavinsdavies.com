@@ -3,14 +3,16 @@ title: Gavin S. Davies
 translationKey: home
 ---
 
-Cette page est une ebauche en francais. La version anglaise reste canonical en attendant une traduction complete.
+Cette page est une ébauche en français. La version anglaise reste la version de référence (canonical) en attendant une traduction complète.
+
+Je suis professeur associé de physique et d'astronomie à l'Université du Mississippi, où je suis également coordinateur du programme d'études supérieures. Mon groupe étudie la physique des oscillations de neutrinos avec les expériences NOvA, DUNE et EMPHATIC au Fermilab.
 
 ## Recherche
 
-J'etudie les oscillations de neutrinos avec NOvA, DUNE et EMPHATIC a Fermilab.
+J'étudie les oscillations de neutrinos avec NOvA, DUNE et EMPHATIC à Fermilab.
 
 ## Liens
 
-- [UM Neutrino](https://www.umneutrino.com)
-- [Articles](/blog/)
+- [Groupe UM Neutrino](https://www.umneutrino.com)
+- [Articles (Blog)](/blog/)
 - [Contact](mailto:gsdavies@olemiss.edu)

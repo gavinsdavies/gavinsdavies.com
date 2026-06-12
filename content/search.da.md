@@ -1,7 +1,7 @@
 ---
-title: Sog
+title: Søg
 layout: search
 translationKey: search
-summary: Sog i indlaeg og sider
-placeholder: Sog paa dette site
+summary: Søg i indlæg og sider
+placeholder: Søg på dette websted
 ---
