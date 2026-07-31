@@ -1,19 +1,16 @@
 main:
   - name: Home
-    url: '/#about'
+    url: /
     weight: 10
   - name: Research
-    url: '/#research'
+    url: /#research
     weight: 20
   - name: Teaching
-    url: '/#teaching'
+    url: /#teaching
     weight: 30
-  - name: Outreach
-    url: '/#outreach'
-    weight: 40
-  - name: CV
-    url: uploads/cv.pdf
+  - name: Search
+    url: /search/
     weight: 50
-  - name: Contact
-    url: '/#contact'
+  - name: CV
+    url: /uploads/cv.pdf
     weight: 60

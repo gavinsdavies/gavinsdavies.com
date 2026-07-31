@@ -21,6 +21,10 @@ public/
 resources/
 .hugo_build.lock
 hugo_stats.json
+static/uploads/cv.pdf
+
+# Local-only agent instructions (never publish)
+/CLAUDE.md
 
 # Node
 node_modules/

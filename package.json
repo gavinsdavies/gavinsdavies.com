@@ -2,8 +2,9 @@
   "name": "gavinsdavies.com",
   "private": true,
   "scripts": {
-    "build": "hugo --gc --minify",
-    "dev": "hugo server --disableFastRender"
+    "sync:cv": "sh scripts/sync-cv.sh",
+    "build": "npm run sync:cv && hugo --gc --minify",
+    "dev": "npm run sync:cv && hugo server --disableFastRender"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0"
