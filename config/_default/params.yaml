@@ -44,6 +44,9 @@ socialIcons:
     url: https://orcid.org/0000-0002-5728-5356
   - name: googlescholar
     url: https://scholar.google.com/citations?user=Yg5rE2YAAAAJ
+  - name: inspire
+    title: Inspire-HEP
+    url: https://inspirehep.net/authors/1068224
 
 fuseOpts:
   isCaseSensitive: false

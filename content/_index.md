@@ -28,6 +28,8 @@ Software and computing are as central to my work as the physics itself. As DUNE'
 
 **Open data.** I care about open data, and I'm pursuing ideas to increase it for the neutrino community.
 
+**Documentation, training & tutorials.** A particular passion of mine is making software approachable for people just starting out. I've written [interactive Jupyter notebooks](https://github.com/mesh-collab/epic-curriculum) that walk students through Python fundamentals and neutrino oscillation physics for the EPIC summer school, built on [`nuosclab`](https://github.com/gavinsdavies/nuosclab), an interactive PMNS + NSI oscillation-probability viewer I wrote to make the underlying physics tangible.
+
 **Passion projects.** Alongside the day job, I tinker with smaller tools on the side, including a log-analysis tool for site traffic and experiments with LLMs plus knowledge graphs for navigating large codebases.
 
 </section>
