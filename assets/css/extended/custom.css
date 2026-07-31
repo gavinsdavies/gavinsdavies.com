@@ -118,3 +118,17 @@
 .social-icon--inspire svg {
   border-radius: 3px;
 }
+
+.post-byline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.post-byline img {
+  border-radius: 50%;
+  margin: 0;
+}
