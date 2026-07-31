@@ -48,6 +48,7 @@
 
 .home-profile .buttons {
   justify-content: center;
+  align-self: center;
 }
 
 .home-sections {
