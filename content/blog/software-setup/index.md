@@ -180,7 +180,7 @@ and an Emacs keybinding extension for anyone (like me) whose fingers learned
 I run three different AI coding CLIs side by side, mostly because they're
 each strongest in different places: Anthropic's Claude Code for the bulk of
 day-to-day coding and agentic work (including most of the work behind this
-site and this post), OpenAI's Codex CLI as a second opinion, and Google's
+site and the legwork to get configs and setup for this post), OpenAI's Codex CLI as a second opinion, and Google's
 Antigravity, whose CLI is invoked as `agy` and whose config still lives
 under `~/.gemini/`, a naming trail left over from its Gemini-model roots
 that hasn't fully settled yet.
