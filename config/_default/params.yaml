@@ -28,6 +28,8 @@ profileMode:
   imageWidth: 160
   imageHeight: 160
   buttons:
+    - name: Writing
+      url: /blog/
     - name: Research Group
       url: https://www.umneutrino.org
     - name: CV
