@@ -58,7 +58,7 @@ languages:
     title: Gavin S. Davies
     params:
       profileMode:
-        subtitle: Associate Professor of Physics & Astronomy at the University of Mississippi, working on neutrino oscillations with NOvA, DUNE, and EMPHATIC.
+        subtitle: "Associate Professor of Physics & Astronomy at the University of Mississippi, working on neutrino oscillations with NOvA, DUNE, and EMPHATIC. British, born in Germany: 🇬🇧🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁷󠁬󠁳󠁿🇩🇪"
   es:
     label: Español
     locale: es
@@ -66,7 +66,7 @@ languages:
     title: Gavin S. Davies
     params:
       profileMode:
-        subtitle: Profesor Asociado de Física y Astronomía en la Universidad de Mississippi, físico experimental de partículas. Traducción completa pendiente.
+        subtitle: "Profesor Asociado de Física y Astronomía en la Universidad de Mississippi, físico experimental de partículas. Traducción completa pendiente. Británico, nacido en Alemania: 🇬🇧🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁷󠁬󠁳󠁿🇩🇪"
   da:
     label: Dansk
     locale: da
@@ -74,7 +74,7 @@ languages:
     title: Gavin S. Davies
     params:
       profileMode:
-        subtitle: Lektor (Associate Professor) i fysik og astronomi ved University of Mississippi, eksperimentel partikelfysiker. Fuld oversættelse kommer senere.
+        subtitle: "Lektor (Associate Professor) i fysik og astronomi ved University of Mississippi, eksperimentel partikelfysiker. Fuld oversættelse kommer senere. Britisk, født i Tyskland: 🇬🇧🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁷󠁬󠁳󠁿🇩🇪"
   fr:
     label: Français
     locale: fr
@@ -82,7 +82,7 @@ languages:
     title: Gavin S. Davies
     params:
       profileMode:
-        subtitle: Professeur associé de physique et d'astronomie à l'Université du Mississippi, physicien expérimental des particules. Traduction complète à venir.
+        subtitle: "Professeur associé de physique et d'astronomie à l'Université du Mississippi, physicien expérimental des particules. Traduction complète à venir. Britannique, né en Allemagne : 🇬🇧🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁷󠁬󠁳󠁿🇩🇪"
   de:
     label: Deutsch
     locale: de
@@ -90,4 +90,4 @@ languages:
     title: Gavin S. Davies
     params:
       profileMode:
-        subtitle: Außerordentlicher Professor (Associate Professor) für Physik und Astronomie an der University of Mississippi, experimenteller Teilchenphysiker. Vollständige Übersetzung folgt.
+        subtitle: "Außerordentlicher Professor (Associate Professor) für Physik und Astronomie an der University of Mississippi, experimenteller Teilchenphysiker. Vollständige Übersetzung folgt. Britisch, geboren in Deutschland: 🇬🇧🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁷󠁬󠁳󠁿🇩🇪"
