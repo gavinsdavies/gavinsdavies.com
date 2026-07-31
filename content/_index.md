@@ -18,6 +18,20 @@ For group members, publications, and news, visit the [UM Neutrino group site](ht
 
 </section>
 
+<section id="software">
+
+## Software
+
+Software and computing are as central to my work as the physics itself. As DUNE's Global Software Technical Lead and co-lead of the Phlex Adoption Working Group, I help shape how a collaboration of this size builds, tests, and maintains the software its physics results depend on.
+
+**Working with LLMs.** I'm interested in where large language models genuinely help physics research, and where they don't. Through my role on the APS DPF Coordinating Panel for Software & Computing, I coauthored ["Building an AI-native Research Ecosystem for Experimental Particle Physics: A Community Vision"](https://arxiv.org/abs/2602.17582), a community effort to work through how LLMs and agentic tools fit into large collaborations, including the policies and best practices that responsible use requires.
+
+**Open data.** I care about open data, and I'm pursuing ideas to increase it for the neutrino community.
+
+**Passion projects.** Alongside the day job, I tinker with smaller tools on the side, including a log-analysis tool for site traffic and experiments with LLMs plus knowledge graphs for navigating large codebases.
+
+</section>
+
 <section id="funding">
 
 ## Funding
