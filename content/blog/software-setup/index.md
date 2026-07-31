@@ -43,9 +43,9 @@ and the like all expect that world).
 configured to launch straight into WSL Ubuntu on startup rather than opening a
 Windows shell first. A couple of details make the WSL boundary less annoying:
 
-- Shift+Enter is remapped to send a plain carriage return, which is what
-  Claude Code and most shells expect for a soft newline instead of submitting
-  the line.
+- A small startup script attaches to my existing `main` tmux session, or
+  creates it if it does not exist, so opening a terminal takes me straight
+  back to the same workspace.
 - A `gui-startup` hook maximizes the window automatically, so every new
   WezTerm launch starts full screen without me touching it.
 
@@ -66,8 +66,9 @@ instead of the default bindings, and Alt+arrow switches panes without needing
 the prefix at all, which turns out to be the single biggest quality-of-life
 change once it's muscle memory. `tmux-resurrect` and `tmux-continuum` (via
 [TPM](https://github.com/tmux-plugins/tpm)) handle the actual persistence:
-sessions get saved automatically and restored on the next tmux start, so a
-reboot doesn't mean losing the panes I had open.
+sessions get saved automatically and reconstructed on the next tmux start.
+After a reboot I get the pane layout and working directories back, although
+live processes do not survive a WSL shutdown.
 
 ## zsh, plugins, and fzf
 
@@ -80,14 +81,21 @@ translates familiar flags (`-l`, `-t`, `-r`) onto
 [eza](https://github.com/eza-community/eza) so directory listings get icons
 and git status without having to relearn a new command.
 
+The useful lesson here was to measure before replacing the most visible
+piece. My interactive shell was taking roughly 1.6 seconds to start; removing
+oh-my-zsh and lazy-loading pyenv cut that to roughly 0.8 seconds. nvm is
+lazy-loaded for the same reason. Changing the prompt alone was not the fix.
+
 ## Atuin for shell history
 
-[Atuin](https://atuin.sh/) replaces plain shell history with a searchable,
-synced database of every command I've run, tagged with the directory and
-exit code. The value isn't really the sync (though it's nice having the same
-history on every machine); it's that searching history by content, not just
-recency, turns "what was that command I ran last month to fix the CVMFS
-mount" from a scrollback hunt into a two-second lookup.
+[Atuin](https://atuin.sh/) layers a searchable local SQLite database over
+plain shell history, tagging commands with their directory, exit code,
+duration, hostname, and session. I keep it local-only for now rather than
+syncing history between machines. Searching by content, not just recency,
+turns "what was that command I ran last month to fix the CVMFS mount" from a
+scrollback hunt into a two-second lookup. Hooks also record shell commands run
+by Claude Code and Codex, so I can find what an agent ran later in the same
+history.
 
 ## yadm for dotfiles
 
@@ -180,10 +188,9 @@ and an Emacs keybinding extension for anyone (like me) whose fingers learned
 I run three different AI coding CLIs side by side, mostly because they're
 each strongest in different places: Anthropic's Claude Code for the bulk of
 day-to-day coding and agentic work (including most of the work behind this
-site and the legwork to get configs and setup for this post), OpenAI's Codex CLI as a second opinion, and Google's
-Antigravity, whose CLI is invoked as `agy` and whose config still lives
-under `~/.gemini/`, a naming trail left over from its Gemini-model roots
-that hasn't fully settled yet.
+site and the legwork to gather configs and setup details for this post),
+OpenAI's Codex CLI as a second opinion, and Google's Antigravity for an
+occasional alternative pass.
 
 <div class="tool-icons">
   <a class="tool-icon" href="https://claude.com/product/claude-code" target="_blank" rel="noopener noreferrer" title="Claude Code">
