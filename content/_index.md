@@ -18,23 +18,6 @@ For group members, publications, and news, visit the [UM Neutrino group site](ht
 
 </section>
 
-<section id="publications">
-
-## Publications
-
-109 refereed and non-refereed publications, 13,090 citations, h-index 40 ([INSPIRE-HEP](https://inspirehep.net/authors/1068224), July 2026). A few recent highlights:
-
-- M. A. Acero *et al.* (NOvA and T2K Collaborations), "Joint neutrino oscillation analysis from the T2K and NOvA experiments", *Nature* 646, 818 (2025)
-- M. A. Acero *et al.* (NOvA Collaboration), "Precision Measurement of Neutrino Oscillation Parameters with 10 Years of Data from the NOvA Experiment", *Phys. Rev. Lett.* 136 (2026)
-- M. A. Acero *et al.* (NOvA Collaboration), "Dual-Baseline Search for Active-to-Sterile Neutrino Oscillations in NOvA", *Phys. Rev. Lett.* 134, 081804 (2025)
-- A. Abed Abud *et al.* (DUNE Collaboration), "The DUNE Science Program", arXiv:2503.23291 (2025)
-- A. Abed Abud *et al.* (DUNE Collaboration), "DUNE Software and Computing Research and Development", arXiv:2503.23743 (2025)
-- B. Abi *et al.* (DUNE Collaboration), "Long-baseline neutrino oscillation physics potential of the DUNE experiment", *Eur. Phys. J. C* 80, 978 (2020)
-
-See the full record on [INSPIRE-HEP](https://inspirehep.net/authors/1068224) or [Google Scholar](https://scholar.google.com/citations?user=Yg5rE2YAAAAJ).
-
-</section>
-
 <section id="funding">
 
 ## Funding
