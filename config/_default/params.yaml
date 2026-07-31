@@ -29,7 +29,7 @@ profileMode:
   imageHeight: 160
   buttons:
     - name: Research Group
-      url: https://www.umneutrino.com
+      url: https://www.umneutrino.org
     - name: CV
       url: /uploads/cv.pdf
 

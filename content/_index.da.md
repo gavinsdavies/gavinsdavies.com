@@ -13,6 +13,6 @@ Jeg arbejder med neutrinooscillationer i NOvA, DUNE og EMPHATIC ved Fermilab.
 
 ## Links
 
-- [UM Neutrino-gruppen](https://www.umneutrino.com)
+- [UM Neutrino-gruppen](https://www.umneutrino.org)
 - [Skriverier (Blog)](/blog/)
 - [Kontakt](mailto:gsdavies@olemiss.edu)
