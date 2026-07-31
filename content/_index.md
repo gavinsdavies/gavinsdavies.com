@@ -6,8 +6,6 @@ title: Gavin S. Davies
 
 ## Research
 
-British 🇬🇧🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁷󠁬󠁳󠁿, born in Lemgo, Germany 🇩🇪.
-
 I'm fascinated by neutrinos: particles so weakly interacting that trillions pass through you each second unnoticed, yet whose tiny, shifting masses may hold clues to why the universe is made of matter at all. My group at the University of Mississippi studies **neutrino oscillation physics**, measuring how neutrinos change flavor as they travel hundreds of kilometers.
 
 **Long-baseline oscillations.** I collaborate on Fermilab's [NOvA](https://novaexperiment.fnal.gov/) experiment and serve as the Mississippi Principal Investigator for [DUNE](https://www.dunescience.org/), the flagship next-generation effort to pin down the neutrino mass ordering and search for CP violation in the lepton sector. Since January 2026 I've served as DUNE's **Global Software Technical Lead**, and since May 2026 I co-lead the collaboration's **Phlex Adoption Working Group**, guiding the software and computing infrastructure behind the experiment.
