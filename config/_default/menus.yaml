@@ -8,9 +8,6 @@ main:
   - name: Teaching
     url: /#teaching
     weight: 30
-  - name: Writing
-    url: /blog/
-    weight: 40
   - name: Search
     url: /search/
     weight: 50
