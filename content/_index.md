@@ -90,7 +90,6 @@ Conferences and collaboration meetings abroad are a welcome excuse to keep impro
 
 ## Contact
 
-**Email:** [gsdavies@olemiss.edu](mailto:gsdavies@olemiss.edu)  
-**Office:** 222 Lewis Hall, University of Mississippi, Oxford, MS 38677
+**Email:** [gavin.s.davies@gmail.com](mailto:gavin.s.davies@gmail.com)
 
 </section>

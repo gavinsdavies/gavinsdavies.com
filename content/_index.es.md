@@ -15,4 +15,4 @@ Estudio física de oscilaciones de neutrinos con NOvA, DUNE y EMPHATIC en Fermil
 
 - [Grupo UM Neutrino](https://www.umneutrino.org)
 - [Publicaciones (Blog)](/blog/)
-- [Contacto](mailto:gsdavies@olemiss.edu)
+- [Contacto](mailto:gavin.s.davies@gmail.com)
