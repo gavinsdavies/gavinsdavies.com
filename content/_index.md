@@ -14,24 +14,21 @@ I'm fascinated by neutrinos: particles so weakly interacting that trillions pass
 
 **Hadron production.** I serve as [EMPHATIC](https://emphatic.fnal.gov/) Software & Analysis Coordinator, measuring hadron-production cross sections that reduce systematic uncertainties for NOvA and DUNE.
 
-For group members, publications, and news, visit the [UM Neutrino group site](https://www.umneutrino.com).
+For group members, publications, and news, visit the [UM Neutrino group site](https://www.umneutrino.org).
 
 </section>
 
-<section id="publications">
+<section id="software">
 
-## Publications
+## Software
 
-109 refereed and non-refereed publications, 13,090 citations, h-index 40 ([INSPIRE-HEP](https://inspirehep.net/authors/1068224), July 2026). A few recent highlights:
+Software and computing are as central to my work as the physics itself. As DUNE's Global Software Technical Lead and co-lead of the Phlex Adoption Working Group, I help shape how a collaboration of this size builds, tests, and maintains the software its physics results depend on.
 
-- M. A. Acero *et al.* (NOvA and T2K Collaborations), "Joint neutrino oscillation analysis from the T2K and NOvA experiments", *Nature* 646, 818 (2025)
-- M. A. Acero *et al.* (NOvA Collaboration), "Precision Measurement of Neutrino Oscillation Parameters with 10 Years of Data from the NOvA Experiment", *Phys. Rev. Lett.* 136 (2026)
-- M. A. Acero *et al.* (NOvA Collaboration), "Dual-Baseline Search for Active-to-Sterile Neutrino Oscillations in NOvA", *Phys. Rev. Lett.* 134, 081804 (2025)
-- A. Abed Abud *et al.* (DUNE Collaboration), "The DUNE Science Program", arXiv:2503.23291 (2025)
-- A. Abed Abud *et al.* (DUNE Collaboration), "DUNE Software and Computing Research and Development", arXiv:2503.23743 (2025)
-- B. Abi *et al.* (DUNE Collaboration), "Long-baseline neutrino oscillation physics potential of the DUNE experiment", *Eur. Phys. J. C* 80, 978 (2020)
+**Working with LLMs.** I'm interested in where large language models genuinely help physics research, and where they don't. Through my role on the APS DPF Coordinating Panel for Software & Computing, I coauthored ["Building an AI-native Research Ecosystem for Experimental Particle Physics: A Community Vision"](https://arxiv.org/abs/2602.17582), a community effort to work through how LLMs and agentic tools fit into large collaborations, including the policies and best practices that responsible use requires.
 
-See the full record on [INSPIRE-HEP](https://inspirehep.net/authors/1068224) or [Google Scholar](https://scholar.google.com/citations?user=Yg5rE2YAAAAJ).
+**Open data.** I care about open data, and I'm pursuing ideas to increase it for the neutrino community.
+
+**Passion projects.** Alongside the day job, I tinker with smaller tools on the side, including a log-analysis tool for site traffic and experiments with LLMs plus knowledge graphs for navigating large codebases.
 
 </section>
 
@@ -66,9 +63,24 @@ I also serve as **Graduate Program Coordinator** for the Department of Physics &
 
 ## Outreach & Service
 
-**Mentoring.** As a first-generation student, from college through to a PhD, I'm committed to supporting researchers from all backgrounds. I supervise graduate and undergraduate researchers in the [UM Neutrino group](https://www.umneutrino.com), with an emphasis on research skills, scientific communication, and career development.
+**Mentoring.** As a first-generation student, from college through to a PhD, I'm committed to supporting researchers from all backgrounds. I supervise graduate and undergraduate researchers in the [UM Neutrino group](https://www.umneutrino.org), with an emphasis on research skills, scientific communication, and career development.
 
 **Service.** I serve on the [APS DPF Coordinating Panel for Software & Computing](https://www.aps.org/units/dpf/), leading the Rising Star Awards Sub-Committee. Past roles include Chairperson of the Fermilab Users Executive Committee and Computing Co-Chair of [ICHEP 2024](https://ichep2024.org/) in Prague.
+
+</section>
+
+<section id="languages">
+
+## Languages & Travel
+
+Outside physics, I love learning languages, and travel is a big part of why. This site is slowly being translated into the languages I'm working on, partly as practice and partly so colleagues and friends can read it in their own language. English stays the canonical version until each translation is complete.
+
+- **Spanish** (B1)
+- **French** (A2)
+- **Danish** (A1)
+- **German** (A1). I was born in Lemgo, Germany, so this one has some roots.
+
+Conferences and collaboration meetings abroad are a welcome excuse to keep improving.
 
 </section>
 

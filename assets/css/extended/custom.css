@@ -1,4 +1,5 @@
 :root {
+  --main-width: 960px;
   --theme: #fffdfb;
   --entry: #ffffff;
   --primary: #111827;
@@ -47,6 +48,7 @@
 
 .home-profile .buttons {
   justify-content: center;
+  align-self: center;
 }
 
 .home-sections {
