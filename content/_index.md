@@ -18,6 +18,18 @@ For group members, publications, and news, visit the [UM Neutrino group site](ht
 
 </section>
 
+<section id="funding">
+
+## Funding
+
+I've been awarded more than **$4.5M** in external funding as PI or co-PI, including:
+
+- **Principal Investigator**, *Establishing a Scientific Computing Hub at the University of Mississippi*, U.S. Dept. of Energy EPSCoR, Award DE-SC0026215, **$1,800,000** (2025–2027)
+- **Co-Principal Investigator**, *Intensity Frontier Studies at the University of Mississippi*, U.S. Dept. of Energy (HEP), **$1,895,000** (2023–2026)
+- **Co-Principal Investigator**, *Intensity Frontier Studies at the University of Mississippi*, U.S. Dept. of Energy (HEP), Award DE-SC0021616, **$800,000** (2020–2023)
+
+</section>
+
 <section id="teaching">
 
 ## Teaching
