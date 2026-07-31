@@ -113,10 +113,8 @@
   color: #4285f4;
 }
 
+/* Inspire is a faithful reproduction of inspirehep.net's own favicon
+   badge, so it carries fixed colors rather than following currentColor. */
 .social-icon--inspire svg {
-  color: #0891b2;
-}
-
-.dark .social-icon--inspire svg {
-  color: #22d3ee;
+  border-radius: 3px;
 }
