@@ -55,6 +55,21 @@ I also serve as **Graduate Program Coordinator** for the Department of Physics &
 
 </section>
 
+<section id="languages">
+
+## Languages & Travel
+
+Outside physics, I love learning languages, and travel is a big part of why. This site is slowly being translated into the languages I'm working on, partly as practice and partly so colleagues and friends can read it in their own language. English stays the canonical version until each translation is complete.
+
+- **Spanish** (B1)
+- **French** (A2)
+- **Danish** (A1)
+- **German** (A1). I was born in Lemgo, Germany, so this one has some roots.
+
+Conferences and collaboration meetings abroad are a welcome excuse to keep improving.
+
+</section>
+
 <section id="contact">
 
 ## Contact
