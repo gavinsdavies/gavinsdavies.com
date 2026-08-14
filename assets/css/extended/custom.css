@@ -85,7 +85,7 @@
 }
 
 .not-found-memoji h1 {
-  font-size: 96px;
+  font-size: clamp(48px, 12vw, 96px);
   font-weight: 700;
   color: var(--gav-teal);
   margin: 0.5rem 0 0;

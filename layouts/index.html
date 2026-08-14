@@ -1,8 +1,17 @@
 {{ define "main" }}
 <article class="first-entry home-profile">
   {{ with site.Params.profileMode.imageUrl }}
+  {{ $w := site.Params.profileMode.imageWidth | default 160 }}
+  {{ $h := site.Params.profileMode.imageHeight | default 160 }}
+  {{ $alt := site.Params.profileMode.imageTitle | default site.Title }}
   <figure class="profile-image">
-    <img src="{{ . | relURL }}" alt="{{ site.Params.profileMode.imageTitle | default site.Title }}" height="{{ site.Params.profileMode.imageHeight | default 160 }}" width="{{ site.Params.profileMode.imageWidth | default 160 }}">
+    {{ with resources.Get (strings.TrimPrefix "/" .) }}
+      {{ $img1x := .Fill (printf "%dx%d" $w $h) }}
+      {{ $img2x := .Fill (printf "%dx%d" (mul $w 2) (mul $h 2)) }}
+      <img src="{{ $img1x.RelPermalink }}" srcset="{{ $img1x.RelPermalink }} 1x, {{ $img2x.RelPermalink }} 2x" alt="{{ $alt }}" height="{{ $h }}" width="{{ $w }}">
+    {{ else }}
+      <img src="{{ . | relURL }}" alt="{{ $alt }}" height="{{ $h }}" width="{{ $w }}">
+    {{ end }}
   </figure>
   {{ end }}
   <header class="entry-header">
