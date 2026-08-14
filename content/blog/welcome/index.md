@@ -11,10 +11,7 @@ tags:
   - neutrinos
 ---
 
-<div class="post-byline">
-  <img src="/img/gsd-memoji.svg" alt="" width="32" height="32">
-  <span>Gavin S. Davies</span>
-</div>
+{{< byline >}}
 
 I'm starting this blog with a short overview of my current setup, partly as an
 intro for new visitors and partly to have something to point back to as things

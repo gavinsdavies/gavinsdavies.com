@@ -36,7 +36,7 @@ Software and computing are as central to my work as the physics itself. As DUNE'
 
 </section>
 
-<section>
+<section class="section-list">
 
 ## Funding
 
@@ -48,7 +48,7 @@ I've been awarded more than **$4.5M** in external funding as PI or co-PI, includ
 
 </section>
 
-<section>
+<section class="section-list">
 
 ## Teaching
 

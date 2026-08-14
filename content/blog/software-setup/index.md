@@ -12,10 +12,7 @@ tags:
   - tools
 ---
 
-<div class="post-byline">
-  <img src="/img/gsd-memoji.svg" alt="" width="32" height="32">
-  <span>Gavin S. Davies</span>
-</div>
+{{< byline >}}
 
 Following up on the [intro post](/blog/welcome/), here's the setup I actually
 work in day to day. None of this is exotic, but it's stable, it's synced
