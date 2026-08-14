@@ -1,6 +1,7 @@
 ---
 title: Gavin S. Davies
 translationKey: home
+description: Associate Professor of Physics & Astronomy at the University of Mississippi, working on neutrino oscillation physics with NOvA, DUNE, and EMPHATIC.
 ---
 
 <section>

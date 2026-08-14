@@ -9,6 +9,7 @@ defaultContentLanguageInSubdir: false
 # Content
 enableEmoji: true
 enableGitInfo: false
+enableRobotsTXT: true
 summaryLength: 30
 
 # Security

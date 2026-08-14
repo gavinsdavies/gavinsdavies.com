@@ -1,4 +1,3 @@
-env: production
 description: Experimental particle physicist at the University of Mississippi working on neutrino oscillation physics with NOvA, DUNE, and EMPHATIC.
 author: Gavin S. Davies
 defaultTheme: auto
@@ -13,6 +12,15 @@ hideFooter: false
 
 assets:
   favicon: /img/gsd-memoji.svg
+
+# Fallback share-card image for og:image/twitter:image on pages that don't
+# set their own cover image. A raster headshot is used rather than the
+# memoji SVG since Twitter/Facebook don't render SVG share-card images.
+images:
+  - /img/me.jpg
+
+schema:
+  publisherType: Person
 
 label:
   text: Gavin S. Davies
