@@ -14,5 +14,5 @@ J'étudie les oscillations de neutrinos avec NOvA, DUNE et EMPHATIC à Fermilab.
 ## Liens
 
 - [Groupe UM Neutrino](https://www.umneutrino.org)
-- [Articles (Blog)](/blog/)
+- [Blog](/blog/)
 - [Contact](mailto:gavin.s.davies@gmail.com)

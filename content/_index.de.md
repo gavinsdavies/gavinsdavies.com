@@ -14,5 +14,5 @@ Ich arbeite an Neutrinooszillationen mit NOvA, DUNE und EMPHATIC am Fermilab.
 ## Links
 
 - [UM Neutrino-Gruppe](https://www.umneutrino.org)
-- [Texte (Blog)](/blog/)
+- [Blog](/blog/)
 - [Kontakt](mailto:gavin.s.davies@gmail.com)

@@ -1,0 +1,16 @@
+main:
+  - name: Startseite
+    url: /
+    weight: 10
+  - name: Forschung
+    url: /#forschung
+    weight: 20
+  - name: Blog
+    url: https://gavinsdavies.com/blog/
+    weight: 30
+  - name: Suche
+    url: /search/
+    weight: 40
+  - name: CV
+    url: https://gavinsdavies.com/uploads/cv.pdf
+    weight: 50

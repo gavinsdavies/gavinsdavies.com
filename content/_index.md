@@ -1,5 +1,6 @@
 ---
 title: Gavin S. Davies
+translationKey: home
 ---
 
 <section id="research">
