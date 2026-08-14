@@ -10,7 +10,7 @@ description: Associate Professor of Physics & Astronomy at the University of Mis
 
 I'm fascinated by neutrinos: particles so weakly interacting that trillions pass through you each second unnoticed, yet whose tiny, shifting masses may hold clues to why the universe is made of matter at all. My group at the University of Mississippi studies **neutrino oscillation physics**, measuring how neutrinos change flavor as they travel hundreds of kilometers.
 
-**Long-baseline oscillations.** I collaborate on Fermilab's [NOvA](https://novaexperiment.fnal.gov/) experiment and serve as the Mississippi Principal Investigator for [DUNE](https://www.dunescience.org/), the flagship next-generation effort to pin down the neutrino mass ordering and search for CP violation in the lepton sector. Since January 2026 I've served as DUNE's **Global Software Technical Lead**, and since May 2026 I co-lead the collaboration's **Phlex Adoption Working Group**, setting technical direction for the experiment's software and computing. Recent joint work between NOvA and T2K also produced some of the most precise neutrino oscillation measurements yet.
+**Long-baseline oscillations.** I collaborate on Fermilab's [NOvA](https://novaexperiment.fnal.gov/) experiment, where I serve as Computing Coordinator, and serve as the Mississippi Principal Investigator for [DUNE](https://www.dunescience.org/), the flagship next-generation effort to pin down the neutrino mass ordering and search for CP violation in the lepton sector. Since January 2026 I've served as DUNE's **Global Software Technical Lead**, and since May 2026 I co-lead the collaboration's **Phlex Adoption Working Group**, setting technical direction for the experiment's software and computing. Recent joint work between NOvA and T2K also produced some of the most precise neutrino oscillation measurements yet.
 
 **Hadron production.** I serve as [EMPHATIC](https://emphatic.fnal.gov/) Software & Analysis Coordinator, measuring hadron-production cross sections that feed into NOvA and DUNE's systematic-uncertainty budgets.
 
@@ -63,7 +63,7 @@ I also serve as **Graduate Program Coordinator** for the Department of Physics &
 
 ## Outreach & Service
 
-**Mentoring.** As a first-generation student, from college through to a PhD, I'm committed to supporting researchers from all backgrounds. I supervise graduate and undergraduate researchers in the [UM Neutrino group](https://www.umneutrino.org), with an emphasis on research skills, scientific communication, and career development.
+**Mentoring.** As a first-generation student, from college through to a PhD, I'm committed to supporting researchers from all backgrounds. I supervise graduate and undergraduate researchers in the [UM Neutrino group](https://www.umneutrino.org), with an emphasis on research skills, scientific communication, and career development. I also coordinate the summer training programme for the Mississippi EPSCoR Scientific Hub (MESH), and lead the DOE EPSCoR award establishing UM's scientific computing hub.
 
 I also serve on the [APS DPF Coordinating Panel for Software & Computing](https://www.aps.org/units/dpf/), leading the Rising Star Awards Sub-Committee. Past roles include Chairperson of the Fermilab Users Executive Committee and Computing Co-Chair of [ICHEP 2024](https://indico.cern.ch/event/1291157/overview) in Prague.
 
