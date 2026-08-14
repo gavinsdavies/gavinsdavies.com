@@ -3,7 +3,7 @@ title: Gavin S. Davies
 translationKey: home
 ---
 
-<section id="research">
+<section>
 
 ## Research
 
@@ -19,7 +19,7 @@ For group members, publications, and news, visit the [UM Neutrino group site](ht
 
 </section>
 
-<section id="software">
+<section>
 
 ## Software
 
@@ -35,7 +35,7 @@ Software and computing are as central to my work as the physics itself. As DUNE'
 
 </section>
 
-<section id="funding">
+<section>
 
 ## Funding
 
@@ -47,7 +47,7 @@ I've been awarded more than **$4.5M** in external funding as PI or co-PI, includ
 
 </section>
 
-<section id="teaching">
+<section>
 
 ## Teaching
 
@@ -62,17 +62,17 @@ I also serve as **Graduate Program Coordinator** for the Department of Physics &
 
 </section>
 
-<section id="service">
+<section>
 
 ## Outreach & Service
 
 **Mentoring.** As a first-generation student, from college through to a PhD, I'm committed to supporting researchers from all backgrounds. I supervise graduate and undergraduate researchers in the [UM Neutrino group](https://www.umneutrino.org), with an emphasis on research skills, scientific communication, and career development.
 
-**Service.** I serve on the [APS DPF Coordinating Panel for Software & Computing](https://www.aps.org/units/dpf/), leading the Rising Star Awards Sub-Committee. Past roles include Chairperson of the Fermilab Users Executive Committee and Computing Co-Chair of [ICHEP 2024](https://ichep2024.org/) in Prague.
+**Service.** I serve on the [APS DPF Coordinating Panel for Software & Computing](https://www.aps.org/units/dpf/), leading the Rising Star Awards Sub-Committee. Past roles include Chairperson of the Fermilab Users Executive Committee and Computing Co-Chair of [ICHEP 2024](https://indico.cern.ch/event/1291157/overview) in Prague.
 
 </section>
 
-<section id="languages">
+<section>
 
 ## Languages & Travel
 
@@ -87,7 +87,7 @@ Conferences and collaboration meetings abroad are a welcome excuse to keep impro
 
 </section>
 
-<section id="contact">
+<section>
 
 ## Contact
 
