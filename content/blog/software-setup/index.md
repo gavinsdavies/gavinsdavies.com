@@ -15,9 +15,9 @@ tags:
 {{< byline >}}
 
 Following up on the [intro post](/blog/welcome/), here's the setup I actually
-work in day to day. None of this is exotic, but it's stable, it's synced
-across machines, and it's the kind of thing I wish someone had written down
-for me when I was assembling it.
+work in day to day. None of this is exotic, it's just stable and synced
+across every machine I touch. I wish someone had written it down for me
+back when I was piecing it together, so here it is.
 
 ## The hardware
 
@@ -78,10 +78,11 @@ translates familiar flags (`-l`, `-t`, `-r`) onto
 [eza](https://github.com/eza-community/eza) so directory listings get icons
 and git status without having to relearn a new command.
 
-The useful lesson here was to measure before replacing the most visible
-piece. My interactive shell was taking roughly 1.6 seconds to start; removing
-oh-my-zsh and lazy-loading pyenv cut that to roughly 0.8 seconds. nvm is
-lazy-loaded for the same reason. Changing the prompt alone was not the fix.
+I measured startup time before changing anything, rather than assuming the
+prompt itself was the bottleneck. My interactive shell was taking roughly 1.6
+seconds to start; removing oh-my-zsh and lazy-loading pyenv cut that to
+roughly 0.8 seconds. nvm is lazy-loaded for the same reason. Changing the
+prompt alone was not the fix.
 
 ## Atuin for shell history
 

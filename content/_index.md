@@ -10,11 +10,9 @@ description: Associate Professor of Physics & Astronomy at the University of Mis
 
 I'm fascinated by neutrinos: particles so weakly interacting that trillions pass through you each second unnoticed, yet whose tiny, shifting masses may hold clues to why the universe is made of matter at all. My group at the University of Mississippi studies **neutrino oscillation physics**, measuring how neutrinos change flavor as they travel hundreds of kilometers.
 
-**Long-baseline oscillations.** I collaborate on Fermilab's [NOvA](https://novaexperiment.fnal.gov/) experiment and serve as the Mississippi Principal Investigator for [DUNE](https://www.dunescience.org/), the flagship next-generation effort to pin down the neutrino mass ordering and search for CP violation in the lepton sector. Since January 2026 I've served as DUNE's **Global Software Technical Lead**, and since May 2026 I co-lead the collaboration's **Phlex Adoption Working Group**, guiding the software and computing infrastructure behind the experiment.
+**Long-baseline oscillations.** I collaborate on Fermilab's [NOvA](https://novaexperiment.fnal.gov/) experiment and serve as the Mississippi Principal Investigator for [DUNE](https://www.dunescience.org/), the flagship next-generation effort to pin down the neutrino mass ordering and search for CP violation in the lepton sector. Since January 2026 I've served as DUNE's **Global Software Technical Lead**, and since May 2026 I co-lead the collaboration's **Phlex Adoption Working Group**, setting technical direction for the experiment's software and computing. Recent joint work between NOvA and T2K also produced some of the most precise neutrino oscillation measurements yet.
 
-**Combining experiments.** Recent joint work with NOvA and T2K produced among the most precise neutrino oscillation measurements yet.
-
-**Hadron production.** I serve as [EMPHATIC](https://emphatic.fnal.gov/) Software & Analysis Coordinator, measuring hadron-production cross sections that reduce systematic uncertainties for NOvA and DUNE.
+**Hadron production.** I serve as [EMPHATIC](https://emphatic.fnal.gov/) Software & Analysis Coordinator, measuring hadron-production cross sections that feed into NOvA and DUNE's systematic-uncertainty budgets.
 
 For group members, publications, and news, visit the [UM Neutrino group site](https://www.umneutrino.org).
 
@@ -24,15 +22,13 @@ For group members, publications, and news, visit the [UM Neutrino group site](ht
 
 ## Software
 
-Software and computing are as central to my work as the physics itself. As DUNE's Global Software Technical Lead and co-lead of the Phlex Adoption Working Group, I help shape how a collaboration of this size builds, tests, and maintains the software its physics results depend on.
+I spend as much time on software and computing as I do on the physics itself. As DUNE's Global Software Technical Lead and co-lead of the Phlex Adoption Working Group, I help shape how a collaboration of this size builds, tests, and maintains the software its physics results depend on. I also care about open data, and I'm pursuing ideas to increase it for the neutrino community.
 
 **Working with LLMs.** I'm interested in where large language models genuinely help physics research, and where they don't. Through my role on the APS DPF Coordinating Panel for Software & Computing, I coauthored ["Building an AI-native Research Ecosystem for Experimental Particle Physics: A Community Vision"](https://arxiv.org/abs/2602.17582), a community effort to work through how LLMs and agentic tools fit into large collaborations, including the policies and best practices that responsible use requires.
 
-**Open data.** I care about open data, and I'm pursuing ideas to increase it for the neutrino community.
+**Documentation, training & tutorials.** I especially care about making software approachable for people just starting out. I've written [interactive Jupyter notebooks](https://github.com/mesh-collab/epic-curriculum) that walk students through Python fundamentals and neutrino oscillation physics for the EPIC summer school, built on [`nuosclab`](https://github.com/gavinsdavies/nuosclab), an interactive PMNS + NSI oscillation-probability viewer I wrote to make the underlying physics tangible.
 
-**Documentation, training & tutorials.** A particular passion of mine is making software approachable for people just starting out. I've written [interactive Jupyter notebooks](https://github.com/mesh-collab/epic-curriculum) that walk students through Python fundamentals and neutrino oscillation physics for the EPIC summer school, built on [`nuosclab`](https://github.com/gavinsdavies/nuosclab), an interactive PMNS + NSI oscillation-probability viewer I wrote to make the underlying physics tangible.
-
-**Passion projects.** Alongside the day job, I tinker with smaller tools on the side, including a log-analysis tool for site traffic and experiments with LLMs plus knowledge graphs for navigating large codebases.
+**Side projects.** Alongside the day job, I tinker with smaller tools on the side, including a log-analysis tool for site traffic and experiments with LLMs plus knowledge graphs for navigating large codebases.
 
 </section>
 
@@ -69,7 +65,7 @@ I also serve as **Graduate Program Coordinator** for the Department of Physics &
 
 **Mentoring.** As a first-generation student, from college through to a PhD, I'm committed to supporting researchers from all backgrounds. I supervise graduate and undergraduate researchers in the [UM Neutrino group](https://www.umneutrino.org), with an emphasis on research skills, scientific communication, and career development.
 
-**Service.** I serve on the [APS DPF Coordinating Panel for Software & Computing](https://www.aps.org/units/dpf/), leading the Rising Star Awards Sub-Committee. Past roles include Chairperson of the Fermilab Users Executive Committee and Computing Co-Chair of [ICHEP 2024](https://indico.cern.ch/event/1291157/overview) in Prague.
+I also serve on the [APS DPF Coordinating Panel for Software & Computing](https://www.aps.org/units/dpf/), leading the Rising Star Awards Sub-Committee. Past roles include Chairperson of the Fermilab Users Executive Committee and Computing Co-Chair of [ICHEP 2024](https://indico.cern.ch/event/1291157/overview) in Prague.
 
 </section>
 
