@@ -1,17 +1,20 @@
-<div class="social-icons" {{ with .align}}align="{{.}}" {{- end }}>
+<div class="social-icons{{ with .align }} social-icons--{{ . }}{{ end }}">
     {{- range site.Params.socialIcons }}
     {{- $name := trim .name " " | lower }}
+    {{- $label := .title | default (.name | title) }}
     <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
         class="social-icon social-icon--{{ $name }}"
-        title="{{ (.title | default .name) | title }}">
+        title="{{ $label }}" aria-label="{{ $label }}">
         {{- if eq $name "inspire" -}}
+        <span aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect width="24" height="24" rx="3" fill="#001529" />
             <circle cx="11.75" cy="5.25" r="1.1" fill="#fff" />
             <rect x="10.75" y="8.5" width="2" height="10.5" rx="1" fill="#fff" />
         </svg>
+        </span>
         {{- else -}}
-        {{ partial "svg.html" . }}
+        <span aria-hidden="true">{{ partial "svg.html" . }}</span>
         {{- end -}}
     </a>
     {{- end }}
