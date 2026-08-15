@@ -1,5 +1,9 @@
 :root {
   --main-width: 960px;
+  /* Keep the header/nav column the same width as the content column below
+     it. PaperMod's own default (1024px) predates our main-width bump and
+     was left stale, offsetting the logo/menu from the text by 64px. */
+  --nav-width: 960px;
   --theme: #fffdfb;
   --entry: #ffffff;
   --primary: #111827;
@@ -10,7 +14,6 @@
   --code-bg: #f4f7f8;
   --border: #d9e2e5;
   --gav-teal: #0f766e;
-  --gav-red: #b91c1c;
 }
 
 .dark {
@@ -23,8 +26,10 @@
   --hljs-bg: #0f172a;
   --code-bg: #0f172a;
   --border: #334155;
-  --gav-teal: #2dd4bf;
-  --gav-red: #f87171;
+  /* Brightened from the light-mode teal for contrast against a dark
+     background, but kept one step short of teal-400 (#2dd4bf) so it still
+     reads as the same brand color rather than a separate neon accent. */
+  --gav-teal: #14b8a6;
 }
 
 .profile-image img {
@@ -65,14 +70,32 @@
   color: var(--gav-teal);
 }
 
+/* Funding and Teaching are lists, not prose, so give them a distinct card
+   treatment (same visual language as .callout below) instead of blending
+   into the paragraph-heavy sections around them. */
+.home-sections .post-content .section-list ul {
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.home-sections .post-content .section-list li {
+  padding: 0.75rem 1rem;
+  border-inline-start: 3px solid var(--gav-teal);
+  border-radius: 6px;
+  background: var(--entry);
+}
+
 .post-content a,
 .entry-content a {
-  box-shadow: 0 1px 0 var(--gav-red);
+  box-shadow: 0 1px 0 var(--gav-teal);
 }
 
 .post-content a:hover,
 .entry-content a:hover {
-  color: var(--gav-red);
+  color: var(--gav-teal);
 }
 
 .not-found-memoji {
@@ -85,7 +108,7 @@
 }
 
 .not-found-memoji h1 {
-  font-size: 96px;
+  font-size: clamp(48px, 12vw, 96px);
   font-weight: 700;
   color: var(--gav-teal);
   margin: 0.5rem 0 0;
@@ -96,6 +119,10 @@
   justify-content: center;
   margin-top: 0.5rem;
   opacity: 0.7;
+}
+
+.social-icons--center {
+  text-align: center;
 }
 
 /* Brand-color social icons where an official brand color exists.
@@ -114,9 +141,13 @@
 }
 
 /* Inspire is a faithful reproduction of inspirehep.net's own favicon
-   badge, so it carries fixed colors rather than following currentColor. */
-.social-icon--inspire svg {
-  border-radius: 3px;
+   badge, so it keeps its fixed navy/white colors rather than following
+   currentColor like the other brand icons (rounding comes from the SVG's
+   own rx="3", no CSS radius needed). In dark mode the badge's navy is
+   close enough to the page background that it loses its edge, so give it
+   a hairline border there rather than reworking its brand-accurate fill. */
+.dark .social-icon--inspire svg {
+  border: 1px solid var(--border);
 }
 
 .post-byline {

@@ -5,11 +5,5 @@
     "sync:cv": "sh scripts/sync-cv.sh",
     "build": "npm run sync:cv && hugo --gc --minify",
     "dev": "npm run sync:cv && hugo server --disableFastRender"
-  },
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.0.0"
-  },
-  "dependencies": {
-    "@tailwindcss/typography": "^0.5.19"
   }
 }
