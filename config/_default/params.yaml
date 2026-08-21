@@ -42,6 +42,10 @@ profileMode:
       url: https://www.umneutrino.org
     - name: CV
       url: /uploads/cv.pdf
+  education:
+    degree: PhD in Physics
+    year: 2011
+    institution: Lancaster University, UK
 
 socialIcons:
   - name: email
