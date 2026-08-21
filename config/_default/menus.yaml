@@ -2,21 +2,9 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Research
-    url: /#research
-    weight: 20
-  - name: Teaching
-    url: /#teaching
-    weight: 30
-  - name: Funding
-    url: /#funding
-    weight: 40
   - name: Writing
     url: /blog/
-    weight: 50
-  - name: CV
-    url: /uploads/cv.pdf
-    weight: 60
+    weight: 20
   - name: Search
     url: /search/
-    weight: 70
+    weight: 30

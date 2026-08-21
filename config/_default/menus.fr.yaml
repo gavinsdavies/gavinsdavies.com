@@ -2,15 +2,9 @@ main:
   - name: Accueil
     url: /
     weight: 10
-  - name: Recherche
-    url: /#recherche
-    weight: 20
   - name: Blog
     url: https://gavinsdavies.com/blog/
-    weight: 30
+    weight: 20
   - name: Rechercher
     url: /search/
-    weight: 40
-  - name: CV
-    url: https://gavinsdavies.com/uploads/cv.pdf
-    weight: 50
+    weight: 30
