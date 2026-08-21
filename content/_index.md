@@ -4,7 +4,7 @@ translationKey: home
 description: Associate Professor of Physics & Astronomy at the University of Mississippi, working on neutrino oscillation physics with NOvA, DUNE, and EMPHATIC.
 ---
 
-<section>
+<section id="research">
 
 ## Research
 
@@ -18,7 +18,7 @@ For group members, publications, and news, visit the [UM Neutrino group site](ht
 
 </section>
 
-<section>
+<section id="software">
 
 ## Software
 
@@ -32,7 +32,7 @@ I spend as much time on software and computing as I do on the physics itself. As
 
 </section>
 
-<section class="section-list">
+<section id="funding" class="section-list">
 
 ## Funding
 
@@ -44,7 +44,7 @@ I've been awarded more than **$4.5M** in external funding as PI or co-PI, includ
 
 </section>
 
-<section class="section-list">
+<section id="teaching" class="section-list">
 
 ## Teaching
 
@@ -59,7 +59,7 @@ I also serve as **Graduate Program Coordinator** for the Department of Physics &
 
 </section>
 
-<section>
+<section id="outreach">
 
 ## Outreach & Service
 
@@ -69,7 +69,7 @@ I also serve on the [APS DPF Coordinating Panel for Software & Computing](https:
 
 </section>
 
-<section>
+<section id="languages">
 
 ## Languages & Travel
 
@@ -84,7 +84,7 @@ Conferences and collaboration meetings abroad are a welcome excuse to keep impro
 
 </section>
 
-<section>
+<section id="contact">
 
 ## Contact
 

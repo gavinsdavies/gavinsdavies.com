@@ -4,34 +4,38 @@
   {{ $w := site.Params.profileMode.imageWidth | default 160 }}
   {{ $h := site.Params.profileMode.imageHeight | default 160 }}
   {{ $alt := site.Params.profileMode.imageTitle | default site.Title }}
-  <figure class="profile-image">
-    {{ with resources.Get (strings.TrimPrefix "/" .) }}
-      {{ $img1x := .Fill (printf "%dx%d" $w $h) }}
-      {{ $img2x := .Fill (printf "%dx%d" (mul $w 2) (mul $h 2)) }}
-      <img src="{{ $img1x.RelPermalink }}" srcset="{{ $img1x.RelPermalink }} 1x, {{ $img2x.RelPermalink }} 2x" alt="{{ $alt }}" height="{{ $h }}" width="{{ $w }}">
-    {{ else }}
-      <img src="{{ . | relURL }}" alt="{{ $alt }}" height="{{ $h }}" width="{{ $w }}">
-    {{ end }}
-  </figure>
-  {{ end }}
-  <header class="entry-header">
-    <h1>{{ site.Params.profileMode.title | default site.Title }}</h1>
-  </header>
-  {{ with site.Params.profileMode.subtitle }}
-  <div class="entry-content">
-    <p>{{ . }}</p>
+  <div class="hero-photo-wrapper">
+    <figure class="profile-image">
+      {{ with resources.Get (strings.TrimPrefix "/" .) }}
+        {{ $img1x := .Fill (printf "%dx%d" $w $h) }}
+        {{ $img2x := .Fill (printf "%dx%d" (mul $w 2) (mul $h 2)) }}
+        <img src="{{ $img1x.RelPermalink }}" srcset="{{ $img1x.RelPermalink }} 1x, {{ $img2x.RelPermalink }} 2x" alt="{{ $alt }}" height="{{ $h }}" width="{{ $w }}">
+      {{ else }}
+        <img src="{{ . | relURL }}" alt="{{ $alt }}" height="{{ $h }}" width="{{ $w }}">
+      {{ end }}
+    </figure>
   </div>
   {{ end }}
-  {{ with site.Params.socialIcons }}
-  {{ partial "social_icons.html" (dict "align" "center") }}
-  {{ end }}
-  {{ with site.Params.profileMode.buttons }}
-  <div class="buttons">
-    {{ range . }}
-    <a class="button" href="{{ .url }}" rel="noopener">{{ .name }}</a>
+  <div class="hero-content">
+    <header class="entry-header">
+      <h1>{{ site.Params.profileMode.title | default site.Title }}</h1>
+    </header>
+    {{ with site.Params.profileMode.subtitle }}
+    <div class="entry-content">
+      <p>{{ . }}</p>
+    </div>
+    {{ end }}
+    {{ with site.Params.socialIcons }}
+    {{ partial "social_icons.html" dict }}
+    {{ end }}
+    {{ with site.Params.profileMode.buttons }}
+    <div class="buttons">
+      {{ range . }}
+      <a class="button" href="{{ .url }}" rel="noopener">{{ .name }}</a>
+      {{ end }}
+    </div>
     {{ end }}
   </div>
-  {{ end }}
 </article>
 
 {{ with .Content }}
@@ -40,5 +44,46 @@
     {{ . }}
   </div>
 </article>
+<script>
+  (function () {
+    var container = document.querySelector(".home-sections .post-content");
+    if (!container) return;
+    var sections = Array.prototype.filter.call(container.children, function (el) {
+      return el.tagName === "SECTION" && el.id;
+    });
+    if (sections.length < 2) return;
+
+    var tabs = document.createElement("nav");
+    tabs.className = "section-tabs";
+    tabs.setAttribute("aria-label", "Homepage sections");
+
+    function select(target) {
+      sections.forEach(function (section) {
+        section.hidden = section.id !== target;
+      });
+      Array.prototype.forEach.call(tabs.children, function (tab) {
+        tab.classList.toggle("active", tab.dataset.target === target);
+      });
+    }
+
+    sections.forEach(function (section, i) {
+      var heading = section.querySelector("h2");
+      var label = String(i + 1).padStart(2, "0") + " " + (heading ? heading.textContent : section.id);
+      var tab = document.createElement("button");
+      tab.type = "button";
+      tab.className = "section-tab";
+      tab.textContent = label;
+      tab.dataset.target = section.id;
+      tab.addEventListener("click", function () {
+        select(section.id);
+      });
+      tabs.appendChild(tab);
+    });
+
+    container.classList.add("js-tabs");
+    container.insertBefore(tabs, sections[0]);
+    select(sections[0].id);
+  })();
+</script>
 {{ end }}
 {{ end }}

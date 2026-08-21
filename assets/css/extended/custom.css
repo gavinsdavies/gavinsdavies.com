@@ -32,28 +32,59 @@
   --gav-teal: #14b8a6;
 }
 
+.home-profile {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-photo-wrapper {
+  width: 200px;
+}
+
+.profile-image {
+  margin: 0;
+}
+
 .profile-image img {
-  border: 3px solid var(--gav-teal);
-  border-radius: 50%;
-  box-shadow: 0 12px 32px rgba(15, 118, 110, 0.18);
-  margin: 0 auto 1rem;
-  aspect-ratio: 1 / 1;
+  display: block;
+  width: 100%;
+  border: 1px solid var(--gav-teal);
+  border-radius: 4px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 20%;
 }
 
-.home-profile {
-  text-align: center;
+.hero-content {
+  min-width: 0;
 }
 
-.home-profile .entry-content {
-  margin: 0 auto;
-  max-width: 680px;
+.hero-content .entry-header {
+  text-align: left;
+}
+
+.hero-content .entry-content {
+  text-align: left;
+  margin: 0;
 }
 
 .home-profile .buttons {
-  justify-content: center;
-  align-self: center;
+  justify-content: flex-start;
+  align-self: auto;
+}
+
+@media (max-width: 600px) {
+  .home-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo-wrapper {
+    width: 140px;
+  }
 }
 
 .home-sections {
@@ -70,22 +101,61 @@
   color: var(--gav-teal);
 }
 
-/* Funding and Teaching are lists, not prose, so give them a distinct card
-   treatment (same visual language as .callout below) instead of blending
-   into the paragraph-heavy sections around them. */
+/* Section tabs: JS (in layouts/index.html) reads each <section id> + its h2
+   and builds this bar, then hides every section but the selected one. The
+   stacked border/spacing above is for the no-JS fallback (every section
+   shown in order); once tabs are live, the lone visible section doesn't
+   need its own top rule. */
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+}
+
+.section-tab {
+  font: inherit;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--gav-teal);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--gav-teal);
+  cursor: pointer;
+}
+
+.section-tab.active {
+  background: var(--gav-teal);
+  color: var(--theme);
+}
+
+.post-content.js-tabs section {
+  border-top: none;
+  margin-top: 2rem;
+  padding-top: 0;
+}
+
+/* Funding and Teaching are lists, not prose. Previously these were
+   colored-left-border rounded cards (the same shape .callout below still
+   uses) -- a recognizable AI-generated-site tell. Hairline top-rule rows
+   read as a CV/publication list instead, matching the rest of the page's
+   flat, borderless treatment. */
 .home-sections .post-content .section-list ul {
   list-style: none;
-  display: grid;
-  gap: 0.6rem;
   margin: 1rem 0;
   padding: 0;
 }
 
 .home-sections .post-content .section-list li {
-  padding: 0.75rem 1rem;
-  border-inline-start: 3px solid var(--gav-teal);
-  border-radius: 6px;
-  background: var(--entry);
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.home-sections .post-content .section-list li:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 .post-content a,
@@ -119,10 +189,6 @@
   justify-content: center;
   margin-top: 0.5rem;
   opacity: 0.7;
-}
-
-.social-icons--center {
-  text-align: center;
 }
 
 /* Brand-color social icons where an official brand color exists.
