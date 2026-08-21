@@ -137,22 +137,25 @@
   padding-top: 0;
 }
 
-/* Funding and Teaching are lists, not prose, so give them a distinct card
-   treatment (same visual language as .callout below) instead of blending
-   into the paragraph-heavy sections around them. */
+/* Funding and Teaching are lists, not prose. Previously these were
+   colored-left-border rounded cards (the same shape .callout below still
+   uses) -- a recognizable AI-generated-site tell. Hairline top-rule rows
+   read as a CV/publication list instead, matching the rest of the page's
+   flat, borderless treatment. */
 .home-sections .post-content .section-list ul {
   list-style: none;
-  display: grid;
-  gap: 0.6rem;
   margin: 1rem 0;
   padding: 0;
 }
 
 .home-sections .post-content .section-list li {
-  padding: 0.75rem 1rem;
-  border-inline-start: 3px solid var(--gav-teal);
-  border-radius: 6px;
-  background: var(--entry);
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.home-sections .post-content .section-list li:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 .post-content a,
