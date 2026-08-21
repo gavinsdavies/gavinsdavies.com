@@ -101,6 +101,42 @@
   color: var(--gav-teal);
 }
 
+/* Section tabs: JS (in layouts/index.html) reads each <section id> + its h2
+   and builds this bar, then hides every section but the selected one. The
+   stacked border/spacing above is for the no-JS fallback (every section
+   shown in order); once tabs are live, the lone visible section doesn't
+   need its own top rule. */
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+}
+
+.section-tab {
+  font: inherit;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--gav-teal);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--gav-teal);
+  cursor: pointer;
+}
+
+.section-tab.active {
+  background: var(--gav-teal);
+  color: var(--theme);
+}
+
+.post-content.js-tabs section {
+  border-top: none;
+  margin-top: 2rem;
+  padding-top: 0;
+}
+
 /* Funding and Teaching are lists, not prose, so give them a distinct card
    treatment (same visual language as .callout below) instead of blending
    into the paragraph-heavy sections around them. */

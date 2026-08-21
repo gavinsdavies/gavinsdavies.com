@@ -44,5 +44,46 @@
     {{ . }}
   </div>
 </article>
+<script>
+  (function () {
+    var container = document.querySelector(".home-sections .post-content");
+    if (!container) return;
+    var sections = Array.prototype.filter.call(container.children, function (el) {
+      return el.tagName === "SECTION" && el.id;
+    });
+    if (sections.length < 2) return;
+
+    var tabs = document.createElement("nav");
+    tabs.className = "section-tabs";
+    tabs.setAttribute("aria-label", "Homepage sections");
+
+    function select(target) {
+      sections.forEach(function (section) {
+        section.hidden = section.id !== target;
+      });
+      Array.prototype.forEach.call(tabs.children, function (tab) {
+        tab.classList.toggle("active", tab.dataset.target === target);
+      });
+    }
+
+    sections.forEach(function (section, i) {
+      var heading = section.querySelector("h2");
+      var label = String(i + 1).padStart(2, "0") + " " + (heading ? heading.textContent : section.id);
+      var tab = document.createElement("button");
+      tab.type = "button";
+      tab.className = "section-tab";
+      tab.textContent = label;
+      tab.dataset.target = section.id;
+      tab.addEventListener("click", function () {
+        select(section.id);
+      });
+      tabs.appendChild(tab);
+    });
+
+    container.classList.add("js-tabs");
+    container.insertBefore(tabs, sections[0]);
+    select(sections[0].id);
+  })();
+</script>
 {{ end }}
 {{ end }}
