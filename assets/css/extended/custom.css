@@ -32,28 +32,59 @@
   --gav-teal: #14b8a6;
 }
 
+.home-profile {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-photo-wrapper {
+  width: 200px;
+}
+
+.profile-image {
+  margin: 0;
+}
+
 .profile-image img {
-  border: 3px solid var(--gav-teal);
-  border-radius: 50%;
-  box-shadow: 0 12px 32px rgba(15, 118, 110, 0.18);
-  margin: 0 auto 1rem;
-  aspect-ratio: 1 / 1;
+  display: block;
+  width: 100%;
+  border: 1px solid var(--gav-teal);
+  border-radius: 4px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 20%;
 }
 
-.home-profile {
-  text-align: center;
+.hero-content {
+  min-width: 0;
 }
 
-.home-profile .entry-content {
-  margin: 0 auto;
-  max-width: 680px;
+.hero-content .entry-header {
+  text-align: left;
+}
+
+.hero-content .entry-content {
+  text-align: left;
+  margin: 0;
 }
 
 .home-profile .buttons {
-  justify-content: center;
-  align-self: center;
+  justify-content: flex-start;
+  align-self: auto;
+}
+
+@media (max-width: 600px) {
+  .home-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo-wrapper {
+    width: 140px;
+  }
 }
 
 .home-sections {
@@ -119,10 +150,6 @@
   justify-content: center;
   margin-top: 0.5rem;
   opacity: 0.7;
-}
-
-.social-icons--center {
-  text-align: center;
 }
 
 /* Brand-color social icons where an official brand color exists.

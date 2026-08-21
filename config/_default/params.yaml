@@ -33,8 +33,8 @@ profileMode:
   subtitle: Associate Professor of Physics & Astronomy at the University of Mississippi, working on neutrino oscillations with NOvA, DUNE, and EMPHATIC.
   imageUrl: /img/me.jpg
   imageTitle: Gavin S. Davies
-  imageWidth: 160
-  imageHeight: 160
+  imageWidth: 200
+  imageHeight: 250
   buttons:
     - name: Writing
       url: /blog/
