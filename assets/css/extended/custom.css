@@ -178,6 +178,11 @@
   display: none;
 }
 
+.post-content.js-tabs section:focus-visible {
+  outline: 2px solid var(--gav-teal);
+  outline-offset: 4px;
+}
+
 /* Funding and Teaching are lists, not prose. Previously these were
    colored-left-border rounded cards (the same shape .callout below still
    uses) -- a recognizable AI-generated-site tell. Hairline top-rule rows
@@ -197,6 +202,53 @@
 .home-sections .post-content .section-list li:first-child {
   border-top: none;
   padding-top: 0;
+}
+
+/* Keep the compact language/level data aligned as one readable row. The
+   longer personal note stays in the prose below instead of stretching one
+   item out of proportion with the other three. */
+.home-sections .post-content .language-levels ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+  border-block: 1px solid var(--border);
+}
+
+.home-sections .post-content .language-levels li {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.8rem 0.5rem;
+  color: var(--gav-teal);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.home-sections .post-content .language-levels li + li {
+  border-inline-start: 1px solid var(--border);
+}
+
+.home-sections .post-content .language-levels li strong {
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .home-sections .post-content .language-levels ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-sections .post-content .language-levels li:nth-child(3) {
+    border-inline-start: none;
+  }
+
+  .home-sections .post-content .language-levels li:nth-child(n + 3) {
+    border-top: 1px solid var(--border);
+  }
 }
 
 .post-content a,

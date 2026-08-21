@@ -97,6 +97,13 @@
       }
     }
 
+    function scrollToPanel(target) {
+      window.requestAnimationFrame(function () {
+        var panel = document.getElementById(target);
+        if (panel) panel.scrollIntoView({ block: "start" });
+      });
+    }
+
     sections.forEach(function (section, i) {
       var heading = section.querySelector("h2");
       var label = String(i + 1).padStart(2, "0") + " " + (heading ? heading.textContent : section.id);
@@ -134,11 +141,20 @@
 
     container.classList.add("js-tabs");
     container.insertBefore(tabs, sections[0]);
-    select(hashTarget() || sections[0].id, false);
+    var initialTarget = hashTarget();
+    select(initialTarget || sections[0].id, false);
+    if (initialTarget) {
+      window.addEventListener("load", function () {
+        scrollToPanel(initialTarget);
+      }, { once: true });
+    }
 
     window.addEventListener("hashchange", function () {
       var target = hashTarget();
-      if (target) select(target, false);
+      if (target) {
+        select(target, false);
+        scrollToPanel(target);
+      }
     });
   })();
 </script>
