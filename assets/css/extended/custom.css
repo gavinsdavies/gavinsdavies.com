@@ -137,6 +137,16 @@
   padding-top: 0;
 }
 
+/* PaperMod's base reset (`section { display: block }`) is an author rule,
+   so it wins over the browser's built-in `[hidden] { display: none }` UA
+   rule regardless of specificity -- author rules always beat UA rules at
+   equal importance. Restate `[hidden]` here, in the same stylesheet, so
+   its higher specificity settles it: this is what actually hides the
+   non-selected sections, not the `hidden` attribute alone. */
+.post-content.js-tabs section[hidden] {
+  display: none;
+}
+
 /* Funding and Teaching are lists, not prose. Previously these were
    colored-left-border rounded cards (the same shape .callout below still
    uses) -- a recognizable AI-generated-site tell. Hairline top-rule rows
