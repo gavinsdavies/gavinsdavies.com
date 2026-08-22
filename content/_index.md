@@ -69,7 +69,7 @@ I also serve on the [APS DPF Coordinating Panel for Software & Computing](https:
 
 </section>
 
-<section id="languages">
+<section id="languages" class="language-levels">
 
 ## Languages & Travel
 
@@ -78,7 +78,9 @@ Outside physics, I love learning languages, and travel is a big part of why. Thi
 - **Spanish** (B1)
 - **French** (A2)
 - **Danish** (A1)
-- **German** (A1). I was born in Lemgo, Germany, so this one has some roots.
+- **German** (A1)
+
+I was born in Lemgo, Germany, so German has some roots.
 
 Conferences and collaboration meetings abroad are a welcome excuse to keep improving.
 
